@@ -67,7 +67,7 @@ body {
 
 .heading-primary-main {
   display: block;
-  font-size: 4rem;
+  font-size: 60px;
   font-weight: 400;
   letter-spacing: 20px;
 
@@ -76,7 +76,7 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: 1.5rem;
+  font-size: 21px;
   font-weight: 700;
   letter-spacing: 13px;
 
@@ -136,7 +136,7 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1rem 2.3rem;
+  padding: 20px 40px;
   display: inline-block;
   border-radius: 100px;
   position: relative;
@@ -169,14 +169,14 @@ body {
   transition: none; /* No transition on the pseudo-element */
 }
 
-/* Trigger my animation when the button is focused */
+/* Trigger animation when the button is focused */
 .btn:focus::after {
   animation: popout 0.75s forwards;
 }
 
 .btn-animated {
   animation: moveInBottom 1.65s ease-out 0.75s;
-  /* The animation will start 0.75s after the page loads */
+  /* Animation starts 0.75s after page load */
   animation-fill-mode: backwards;
-  /* The animation will start from the beginning */
+  /* Starts animation from beginning */
 }
