@@ -1,0 +1,48 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/*keyframes for the button's popout animation */
+@keyframes popout {
+  0% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+}
+
+/* keyframes for the button's fade-in animation */
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
