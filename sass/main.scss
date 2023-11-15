@@ -13,6 +13,8 @@ $color-primary-dark: #28b485;
 
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
+
 *,
 *::before,
 *::after {
@@ -49,27 +51,25 @@ body {
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-}
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 
-.header__logo {
-  height: 20rem;
-}
+  &__logo {
+    height: 20rem;
+  }
 
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* Absolute/Relative positioning relates to the PARENT ELEMENT */
-  /* transform: translate() relates to the ELEMENT ITSELF */
-  text-align: center;
-  /* text align to center ALL the text-box's text */
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* text align to center ALL the text-box's text */
+  }
 }
 
 .heading-primary {
@@ -78,24 +78,24 @@ body {
   backface-visibility: hidden;
   /* backface-visibllity is used to prevent the text from flickering when the animation is applied */
   margin-bottom: 3.5rem;
-}
 
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 2rem;
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
 
-  animation: moveInLeft 2.5s ease-out;
-}
+    animation: moveInLeft 2.5s ease-out;
+  }
 
-.heading-primary--sub {
-  display: block;
-  font-size: 2.1rem;
-  font-weight: 700;
-  letter-spacing: 1.3rem;
+  &--sub {
+    display: block;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1.3rem;
 
-  animation: moveInRight 2.5s ease-out;
+    animation: moveInRight 2.5s ease-out;
+  }
 }
 
 @keyframes moveInLeft {
@@ -147,58 +147,56 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
 
-  padding: 2rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  position: relative;
-  /* background-color: $color-white;
-  color: $color-grey-dark; */
-  transition: transform 0.3s, box-shadow 0.3s;
-  font-size: 1.6rem;
-}
+    padding: 2rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 1.6rem;
+  }
 
-.btn:hover {
-  /* Keep the hover effect */
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+  &:hover {
+    /* Keep the hover effect */
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
 
-.btn:focus {
-  outline: none; /* Removes the outline on focus */
-}
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: none;
+  }
 
-.btn--white {
-  background-color: $color-white;
-  color: $color-grey-dark;
-}
+  &:focus {
+    outline: none; /* Removes the outline on focus */
+    &::after {
+      background-color: $color-white;
+      animation: popout 0.75s forwards;
+    }
+  }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: none; /* No transition on the pseudo-element */
-}
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+  }
 
-/* Trigger animation when the button is focused */
-.btn:focus::after {
-  background-color: $color-white;
-  animation: popout 0.75s forwards;
-}
-
-.btn--animated {
-  animation: moveInBottom 1.65s ease-out 0.75s;
-  /* Animation starts 0.75s after page load */
-  animation-fill-mode: backwards;
-  /* Starts animation from beginning */
+  &--animated {
+    animation: moveInBottom 1.65s ease-out 0.75s;
+    /* Animation starts 0.75s after page load */
+    animation-fill-mode: backwards;
+    /* Starts animation from beginning */
+  }
 }
