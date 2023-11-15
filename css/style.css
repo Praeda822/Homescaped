@@ -1,63 +1,14 @@
-*,
-*::before,
-*::after {
+*::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit; }
 
 html {
   font-size: 62.5%;
-  /*To convert from our default root size of 10px all I have to do is divide the default font-size (16px), by my desired font size (10px) */
-  /* 1rem = 10px; 10px/16px = 62.5% */ }
+  /*Defines what 1rem is. 10px/16px = 62.5%*/ }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/herobeach.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 20rem; }
-  .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    /* text align to center ALL the text-box's text */ }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /* backface-visibllity is used to prevent the text from flickering when the animation is applied */
-  margin-bottom: 3.5rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 2rem;
-    animation: moveInLeft 2.5s ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2.1rem;
-    font-weight: 700;
-    letter-spacing: 1.3rem;
-    animation: moveInRight 2.5s ease-out; }
 
 @keyframes moveInLeft {
   0% {
@@ -93,6 +44,46 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* prevent text flicker on animation */
+  margin-bottom: 3.5rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation: moveInLeft 2.5s ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1.3rem;
+    animation: moveInRight 2.5s ease-out; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #777777, #5f5f5f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; }
+
+.u-center-text {
+  text-align: center; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -122,17 +113,72 @@ body {
 
 .btn:focus {
   outline: none;
-  /* Removes the outline on focus */ }
+  /* Remove outline on focus */ }
   .btn:focus::after {
     background-color: #fff;
     animation: popout 0.75s forwards; }
 
 .btn--white {
   background-color: #fff;
-  color: #777; }
+  color: #777777; }
 
 .btn--animated {
   animation: moveInBottom 1.65s ease-out 0.75s;
   /* Animation starts 0.75s after page load */
   animation-fill-mode: backwards;
   /* Starts animation from beginning */ }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.8), rgba(160, 182, 198, 0.8)), url(../img/herobeach.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 20rem; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Default to 2 columns */
+  gap: 1.6rem; }
+  .grid__item {
+    background-color: #c80000;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    border-radius: 4px; }
+    .grid__item--1-col {
+      grid-column: span 1; }
+    .grid__item--2-cols {
+      grid-column: span 2; }
+    .grid__item--3-cols {
+      grid-column: span 3; }
+    .grid__item--4-cols {
+      grid-column: span 4; }
+
+/* Responsive breakpoints */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns for medium screens */ } }
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns for large screens */ } }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }

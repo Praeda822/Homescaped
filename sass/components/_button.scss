@@ -32,7 +32,7 @@
   }
 
   &:focus {
-    outline: none; /* Removes the outline on focus */
+    outline: none; /* Remove outline on focus */
     &::after {
       background-color: $color-white;
       animation: popout 0.75s forwards;
