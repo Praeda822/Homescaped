@@ -1,0 +1,12 @@
+.composition {
+  position: relative;
+  &__photo {
+    width: 185%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
