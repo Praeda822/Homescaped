@@ -243,22 +243,14 @@ body {
     text-align: start;
     margin-top: auto; }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); }
   .section-features {
     margin-top: 50rem; } }
 
-@media (min-width: 768px) {
-  .section-features {
-    margin-top: 35rem; }
-  .grid {
-    grid-template-columns: repeat(2, 1fr); } }
-
 .heading-tertiary br {
   display: none; }
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr); } }
 
 @media (min-width: 1200px) {
   .grid {
