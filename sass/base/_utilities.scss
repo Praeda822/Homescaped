@@ -31,3 +31,8 @@
   justify-content: center;
   align-items: center;
 }
+
+.u-wordwrap {
+  max-width: 1000em; // to get the text to wrap like the other two headings..
+  display: inline-block;
+}
