@@ -121,10 +121,6 @@ body {
   justify-content: center;
   align-items: center; }
 
-.u-wordwrap {
-  max-width: 1000em;
-  display: inline-block; }
-
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -246,6 +242,27 @@ body {
     padding-top: 0.6rem;
     text-align: start;
     margin-top: auto; }
+
+@media (min-width: 576px) {
+  .section-features {
+    margin-top: 50rem; } }
+
+@media (min-width: 768px) {
+  .section-features {
+    margin-top: 35rem; }
+  .grid {
+    grid-template-columns: repeat(2, 1fr); } }
+
+.heading-tertiary br {
+  display: none; }
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); } }
 
 .grid {
   max-width: 120rem;

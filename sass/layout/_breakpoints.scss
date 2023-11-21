@@ -1,0 +1,33 @@
+@media (min-width: $breakpoint-phone) {
+  .section-features {
+    margin-top: 50rem;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .section-features {
+    margin-top: 35rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); // 2 columns for medium screens
+  }
+}
+
+.heading-tertiary {
+  br {
+    display: none; // Removes line breaks on smaller screens if needed
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); // 3 columns for larger screens
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); // 4 columns for extra-large screens
+  }
+}
