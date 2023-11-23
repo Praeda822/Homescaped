@@ -1,3 +1,4 @@
+/* Responsive breakpoints */
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr); // 2 columns for medium screens
@@ -7,6 +8,12 @@
 .heading-tertiary {
   br {
     display: none; // Removes line breaks on smaller screens if needed
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); // 3 columns for larger screens
   }
 }
 
