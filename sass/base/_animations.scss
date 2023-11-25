@@ -46,3 +46,11 @@
     transform: translate(0);
   }
 }
+
+/* Keyframes for Nav fade out animation */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
