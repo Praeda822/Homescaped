@@ -330,6 +330,25 @@ body {
     color: #e5e5e5;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
     transform: translateY(-3px); }
+  .footer .footer__socials-links {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; }
+    .footer .footer__socials-links > a:link, .footer .footer__socials-links > a:visited {
+      color: #fefefe;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s; }
+    .footer .footer__socials-links > a:hover, .footer .footer__socials-links > a:active {
+      color: #e5e5e5;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+      transform: translateY(-3px); }
+  .footer__copyright {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fefefe; }
 
 .grid {
   max-width: 120rem;

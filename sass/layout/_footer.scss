@@ -40,4 +40,37 @@
       transform: translateY(-3px);
     }
   }
+
+  .footer__socials {
+    &-links {
+      list-style: none;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+
+      & > a {
+        &:link,
+        &:visited {
+          color: $color-grey-light-1;
+          text-decoration: none;
+          display: inline-block;
+          transition: all 0.2s;
+        }
+
+        &:hover,
+        &:active {
+          color: $color-grey-light-2;
+          box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: 1.2rem;
+    color: $color-grey-light-1;
+  }
 }
