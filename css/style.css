@@ -16,22 +16,9 @@ ORDER: base -> typography -> utilities -> components -> layout -> pages
 html {
   font-size: 62.5%;
   /*Defines what 1rem is. 10px/16px = 62.5%*/ }
-  @media (min-width: 75em) {
-    html {
-      font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
-    html {
-      font-size: 50%;
-      /*1rem = 8px, 8px/16px = 50%*/ } }
-  @media (min-width: 112.5em) {
-    html {
-      font-size: 75%; } }
   html body {
     box-sizing: border-box;
     padding: 1.5rem; }
-    @media (max-width: 56.25em) {
-      html body {
-        padding: 0; } }
   html main {
     overflow: hidden; }
 
