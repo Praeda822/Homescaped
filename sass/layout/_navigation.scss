@@ -70,12 +70,12 @@
       text-decoration: none;
       text-transform: uppercase;
       color: $color-white;
-      background-size: 100%;
       transition: transform 0.3s, color 0.3s, box-shadow 0.3s;
     }
 
     &:hover {
       transform: translateY(-0.3rem);
+      color: $color-grey-dark-1;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     }
     &:active {

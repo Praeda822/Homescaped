@@ -1,3 +1,13 @@
+/*
+0 - 600px: Phone
+600px - 900px: Tablet portrait
+900px - 1200px: Tablet landscape
+1200px - 1800px: Normal desktop
+1800px + : Big desktop
+
+
+ORDER: base -> typography -> utilities -> components -> layout -> pages
+*/
 *::before, *::after {
   margin: 0;
   padding: 0;
@@ -6,12 +16,24 @@
 html {
   font-size: 62.5%;
   /*Defines what 1rem is. 10px/16px = 62.5%*/ }
-
-body {
-  box-sizing: border-box; }
-
-main {
-  overflow: hidden; }
+  @media (min-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%;
+      /*1rem = 8px, 8px/16px = 50%*/ } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  html body {
+    box-sizing: border-box;
+    padding: 1.5rem; }
+    @media (max-width: 56.25em) {
+      html body {
+        padding: 0; } }
+  html main {
+    overflow: hidden; }
 
 @keyframes moveInLeft {
   0% {
@@ -58,7 +80,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777777;
-  padding: 3rem; }
+  padding: 1.5rem; }
 
 .heading-primary {
   color: #fff;
@@ -209,6 +231,9 @@ body {
   background-position: center;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%); }
+  @media (max-width: 600px) {
+    .header {
+      width: 100%; } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -440,11 +465,11 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-  background-size: 100%;
   transition: transform 0.3s, color 0.3s, box-shadow 0.3s; }
 
 .navigation__link:hover {
   transform: translateY(-0.3rem);
+  color: #999;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .navigation__link:active {
@@ -514,18 +539,18 @@ body {
   background-size: cover;
   background-position: center; }
 
-.section-book {
+.section-contact {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, rgba(160, 182, 198, 0.8), rgba(55, 76, 92, 0.8)), url(../img/herojob.jpg);
   background-size: cover;
   background-position: center; }
 
-.book {
+.contact {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/sydneyharb-1.jpg);
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   height: 100%; }
-  .book__form {
+  .contact__form {
     width: 50%;
     padding: 4rem; }

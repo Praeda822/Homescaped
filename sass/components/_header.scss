@@ -11,6 +11,10 @@
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
 
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
   &__logo-box {
     position: absolute;
     top: 4rem;

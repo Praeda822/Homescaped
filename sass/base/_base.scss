@@ -10,12 +10,35 @@
 html {
   font-size: 62.5%;
   /*Defines what 1rem is. 10px/16px = 62.5%*/
-}
 
-body {
-  box-sizing: border-box;
-}
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
 
-main {
-  overflow: hidden;
+  @include respond(tab-port) {
+    font-size: 50%;
+    /*1rem = 8px, 8px/16px = 50%*/
+  }
+
+  // @include respond(phone) {
+  //   font-size: 30%;
+  //   /*1rem = 8px, 8px/16px = 50%*/
+  // }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+
+  body {
+    box-sizing: border-box;
+    padding: 1.5rem;
+
+    @include respond(tab-port) {
+      padding: 0;
+    }
+  }
+
+  main {
+    overflow: hidden;
+  }
 }
