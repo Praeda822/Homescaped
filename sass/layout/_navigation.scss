@@ -1,4 +1,10 @@
 .navigation {
+  &__logo-box {
+    align-items: center;
+  }
+  &__logo {
+    height: 40rem;
+  }
   &__checkbox {
     display: none;
   }
@@ -87,6 +93,11 @@
     opacity: 1;
     visibility: visible;
     width: 100%;
+  }
+
+  &__checkbox:checked + &__button {
+    right: 2rem;
+    transition: right 0.3s ease;
   }
 
   //ICON

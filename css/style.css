@@ -393,6 +393,12 @@ body {
   .grid {
     grid-template-columns: repeat(4, 1fr); } }
 
+.navigation__logo-box {
+  align-items: center; }
+
+.navigation__logo {
+  height: 40rem; }
+
 .navigation__checkbox {
   display: none; }
 
@@ -467,6 +473,10 @@ body {
   opacity: 1;
   visibility: visible;
   width: 100%; }
+
+.navigation__checkbox:checked + .navigation__button {
+  right: 2rem;
+  transition: right 0.3s ease; }
 
 .navigation__icon {
   position: relative;
