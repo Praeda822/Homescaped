@@ -10,6 +10,9 @@ html {
 body {
   box-sizing: border-box; }
 
+main {
+  overflow: hidden; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
