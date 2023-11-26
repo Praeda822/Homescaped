@@ -1,17 +1,12 @@
 .composition {
-  position: relative;
+  width: 100%;
 
   &__container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
+    text-align: center;
     width: 100%;
   }
-}
-
-&__photo {
-  width: auto;
-  max-width: 100%;
-  height: auto;
+  &__photo {
+    width: 100%;
+    height: auto;
+  }
 }

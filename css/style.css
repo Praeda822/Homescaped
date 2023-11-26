@@ -219,12 +219,13 @@ body {
     transform: translate(-50%, -50%); }
 
 .composition {
-  position: relative; }
+  width: 100%; }
+  .composition__container {
+    text-align: center;
+    width: 100%; }
   .composition__photo {
     width: 100%;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-    border-radius: 2px;
-    object-fit: cover; }
+    height: auto; }
 
 .feature-box {
   height: 95%;
@@ -506,7 +507,6 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  margin: 20rem 0 20rem;
   background-image: linear-gradient(to right bottom, rgba(160, 182, 198, 0.8), rgba(55, 76, 92, 0.8)), url(../img/sydneyharb-1.jpg);
   background-size: cover;
   background-position: center; }
