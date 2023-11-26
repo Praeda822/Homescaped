@@ -221,13 +221,10 @@ body {
 .composition {
   position: relative; }
   .composition__photo {
-    width: 185%;
+    width: 100%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     border-radius: 2px;
-    object-fit: cover;
-    position: absolute;
-    left: 0;
-    top: 0; }
+    object-fit: cover; }
 
 .feature-box {
   height: 95%;
@@ -296,22 +293,6 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
-
-/* Responsive breakpoints */
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr); } }
-
-.heading-tertiary br {
-  display: none; }
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr); } }
-
-@media (min-width: 1200px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr); } }
 
 .footer {
   background-color: #000;
@@ -411,7 +392,8 @@ body {
   right: 6rem;
   border-radius: 50%;
   z-index: 2000;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease; }
 
 .navigation__background {
   height: 6rem;
@@ -474,10 +456,6 @@ body {
   visibility: visible;
   width: 100%; }
 
-.navigation__checkbox:checked + .navigation__button {
-  right: 2rem;
-  transition: right 0.3s ease; }
-
 .navigation__icon {
   position: relative;
   margin-top: 3.35rem; }
@@ -528,7 +506,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  margin: 50rem 0 20rem;
+  margin: 20rem 0 20rem;
   background-image: linear-gradient(to right bottom, rgba(160, 182, 198, 0.8), rgba(55, 76, 92, 0.8)), url(../img/sydneyharb-1.jpg);
   background-size: cover;
   background-position: center; }

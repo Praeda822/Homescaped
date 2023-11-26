@@ -3,7 +3,7 @@
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr; /* Default to 2 columns */
+  grid-template-columns: repeat(2, 1fr); /* Default to 2 columns */
   gap: 3rem;
 
   &__item {
@@ -26,11 +26,10 @@
     }
   }
 }
-
 /* Responsive breakpoints */
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); // 2 columns for medium screens
+    grid-template-columns: repeat(1fr); // 2 columns for medium screens
   }
 }
 
@@ -49,5 +48,11 @@
 @media (min-width: 1200px) {
   .grid {
     grid-template-columns: repeat(4, 1fr); // 4 columns for extra-large screens
+  }
+
+  .composition {
+    &__photo {
+      width: 150%;
+    }
   }
 }

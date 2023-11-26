@@ -19,6 +19,7 @@
     border-radius: 50%;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+    transition: right 0.3s ease;
   }
 
   &__background {
@@ -95,10 +96,9 @@
     width: 100%;
   }
 
-  &__checkbox:checked + &__button {
-    right: 2rem;
-    transition: right 0.3s ease;
-  }
+  //to animate button animation on click
+  //   &__checkbox:checked + &__button {
+  //   }
 
   //ICON
   &__icon {
