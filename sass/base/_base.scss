@@ -12,15 +12,21 @@ html {
   /*Defines what 1rem is. 10px/16px = 62.5%*/
 
   @include respond(phone) {
-    font-size: 48%;
+    font-size: 50%;
   }
 
   @include respond(tab-port) {
     font-size: 56.25%;
+    .grid {
+      grid-template-columns: repeat(1, 1fr); // 1 columns for medium screens
+    }
   }
 
   @include respond(tab-land) {
     font-size: 62.5%;
+    .grid {
+      grid-template-columns: repeat(2, 1fr); // 2 columns for large screens
+    }
   }
 
   @include respond(big-desktop) {
@@ -30,6 +36,16 @@ html {
 body {
   box-sizing: border-box;
   padding: 1.5rem;
+
+  @include respond(phone) {
+    padding: 0;
+    margin: 0;
+  }
+
+  @include respond(tab-port) {
+    margin: 0;
+    padding: 0;
+  }
 }
 main {
   overflow: hidden;

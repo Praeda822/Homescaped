@@ -3,7 +3,6 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: $color-grey-dark;
-  padding: 1.5rem;
 }
 
 .heading-primary {
@@ -20,6 +19,11 @@ body {
     letter-spacing: 2rem;
 
     animation: moveInLeft 2.5s ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -29,6 +33,10 @@ body {
     letter-spacing: 1.3rem;
 
     animation: moveInRight 2.5s ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
