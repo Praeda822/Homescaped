@@ -48,7 +48,8 @@ body {
       padding: 0; } }
 
 main {
-  overflow: hidden; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 @keyframes moveInLeft {
   0% {
@@ -420,11 +421,8 @@ body {
   .grid {
     grid-template-columns: repeat(4, 1fr); } }
 
-.navigation__logo-box {
-  align-items: center; }
-
 .navigation__logo {
-  height: 40rem; }
+  height: 30rem; }
 
 .navigation__checkbox {
   display: none; }
@@ -470,7 +468,8 @@ body {
   transform: translate(-50%, -50%);
   list-style: none;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  padding: 0; }
 
 .navigation__item {
   margin: 1.5rem; }

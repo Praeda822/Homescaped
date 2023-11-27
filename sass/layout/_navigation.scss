@@ -1,9 +1,6 @@
 .navigation {
-  &__logo-box {
-    align-items: center;
-  }
   &__logo {
-    height: 40rem;
+    height: 30rem;
   }
   &__checkbox {
     display: none;
@@ -55,6 +52,7 @@
     list-style: none;
     text-align: center;
     width: 100%;
+    padding: 0;
   }
 
   &__item {
