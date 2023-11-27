@@ -13,19 +13,32 @@ html {
 
   @include respond(phone) {
     font-size: 50%;
+    .grid {
+      grid-template-columns: repeat(1, 1fr); // 1 columns for smol screens
+    }
   }
 
   @include respond(tab-port) {
     font-size: 56.25%;
     .grid {
-      grid-template-columns: repeat(1, 1fr); // 1 columns for medium screens
+      grid-template-columns: repeat(2, 1fr); // 2 columns for medium screens
     }
   }
 
   @include respond(tab-land) {
     font-size: 62.5%;
     .grid {
-      grid-template-columns: repeat(2, 1fr); // 2 columns for large screens
+      grid-template-columns: repeat(2, 1fr); // 2 columns for big-smol screens
+    }
+  }
+
+  @include respond(desktop) {
+    font-size: 75%;
+    .grid {
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); // 2 columns for extra-large screens
     }
   }
 
@@ -42,6 +55,8 @@ html {
 body {
   box-sizing: border-box;
   padding: 1.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   @include respond(phone) {
     padding: 0;
@@ -52,8 +67,4 @@ body {
     margin: 0;
     padding: 0;
   }
-}
-main {
-  overflow-y: scroll;
-  overflow-x: hidden;
 }

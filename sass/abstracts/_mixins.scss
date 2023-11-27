@@ -43,6 +43,12 @@ ORDER: base -> typography -> utilities -> components -> layout -> pages
     }
   }
 
+  @if $breakpoint == desktop {
+    @media (min-width: 75.0625em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == big-desktop {
     @media (min-width: 112.5em) {
       @content;

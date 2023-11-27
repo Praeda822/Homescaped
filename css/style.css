@@ -18,15 +18,22 @@ html {
   /*Defines what 1rem is. 10px/16px = 62.5%*/ }
   @media (max-width: 37.5em) {
     html {
-      font-size: 50%; } }
+      font-size: 50%; }
+      html .grid {
+        grid-template-columns: repeat(1, 1fr); } }
   @media (min-width: 37.5625em) and (max-width: 56.25em) {
     html {
       font-size: 56.25%; }
       html .grid {
-        grid-template-columns: repeat(1, 1fr); } }
+        grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 56.3125em) and (max-width: 75em) {
     html {
       font-size: 62.5%; }
+      html .grid {
+        grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 75.0625em) {
+    html {
+      font-size: 75%; }
       html .grid {
         grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 112.5em) {
@@ -37,7 +44,9 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 1.5rem; }
+  padding: 1.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden; }
   @media (max-width: 37.5em) {
     body {
       padding: 0;
@@ -46,10 +55,6 @@ body {
     body {
       margin: 0;
       padding: 0; } }
-
-main {
-  overflow-y: scroll;
-  overflow-x: hidden; }
 
 @keyframes moveInLeft {
   0% {
@@ -269,7 +274,7 @@ body {
     text-align: center;
     width: 100%; }
   .composition__photo {
-    width: 100%;
+    width: 65%;
     height: auto; }
 
 .feature-box {
@@ -417,10 +422,6 @@ body {
       grid-column: span 4; }
 
 /* Responsive breakpoints */
-@media (min-width: 1200px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr); } }
-
 .navigation__logo {
   height: 30rem; }
 
@@ -562,8 +563,8 @@ body {
   background-position: center; }
 
 .contact {
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/sydneyharb-1.jpg);
-  background-size: 100%;
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 53%, transparent 50%), url(../img/sydneyharb-1.jpg);
+  background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   height: 100%; }
