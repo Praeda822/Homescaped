@@ -1,7 +1,7 @@
 /*
 0 - 600px: Phone
-600px - 900px: Tablet portrait
-900px - 1200px: Tablet landscape
+601px - 900px: Tablet portrait
+901px - 1200px: Tablet landscape
 1200px - 1800px: Normal desktop
 1800px + : Big desktop
 
@@ -16,11 +16,25 @@ ORDER: base -> typography -> utilities -> components -> layout -> pages
 html {
   font-size: 62.5%;
   /*Defines what 1rem is. 10px/16px = 62.5%*/ }
-  html body {
-    box-sizing: border-box;
-    padding: 1.5rem; }
-  html main {
-    overflow: hidden; }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 48%; } }
+  @media (min-width: 37.5625em) and (max-width: 56.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media (min-width: 56.3125em) and (max-width: 75em) {
+    html {
+      font-size: 62.5%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 1.5rem; }
+
+main {
+  overflow: hidden; }
 
 @keyframes moveInLeft {
   0% {
@@ -222,12 +236,12 @@ body {
     .header {
       width: 100%; } }
   .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
+    display: flex; }
   .header__logo {
-    height: 20rem; }
+    height: 20rem;
+    margin: 0 auto; }
   .header__text-box {
+    margin: 1.25rem;
     position: absolute;
     top: 50%;
     left: 50%;

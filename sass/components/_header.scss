@@ -16,16 +16,16 @@
   }
 
   &__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
+    display: flex;
   }
 
   &__logo {
     height: 20rem;
+    margin: 0 auto;
   }
 
   &__text-box {
+    margin: 1.25rem;
     position: absolute;
     top: 50%;
     left: 50%;
