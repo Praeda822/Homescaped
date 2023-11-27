@@ -31,6 +31,12 @@ html {
 
   @include respond(big-desktop) {
     font-size: 75%;
+    .grid {
+      grid-template-columns: repeat(
+        4,
+        1fr
+      ); // 4 columns for extra-large screens
+    }
   }
 }
 body {
