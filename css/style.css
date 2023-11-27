@@ -274,7 +274,7 @@ body {
     text-align: center;
     width: 100%; }
   .composition__photo {
-    width: 65%;
+    width: 75%;
     height: auto; }
 
 .feature-box {
@@ -421,7 +421,6 @@ body {
     .grid__item--4-cols {
       grid-column: span 4; }
 
-/* Responsive breakpoints */
 .navigation__logo {
   height: 30rem; }
 
@@ -548,7 +547,7 @@ body {
   margin: 0 auto;
   background-color: #fefefe;
   padding: 25rem 0;
-  margin-top: -20vh; }
+  margin-top: -10vh; }
 
 .section-features {
   padding: 20rem 0;
