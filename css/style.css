@@ -18,7 +18,7 @@ html {
   /*Defines what 1rem is. 10px/16px = 62.5%*/ }
   @media (max-width: 37.5em) {
     html {
-      font-size: 50%; }
+      font-size: 37.92%; }
       html .grid {
         grid-template-columns: repeat(1, 1fr); } }
   @media (min-width: 37.5625em) and (max-width: 56.25em) {
@@ -364,10 +364,12 @@ body {
   .footer__logo-box {
     text-align: center; }
   .footer__logo {
-    width: 100%;
-    height: auto;
-    max-width: 45rem; }
+    height: 30rem; }
+  .footer__navigation {
+    display: flex;
+    justify-content: space-around; }
   .footer__list {
+    padding: 0;
     list-style: none; }
   .footer__item {
     padding: 0.5rem 0; }
@@ -399,6 +401,9 @@ body {
     text-align: center;
     font-size: 1.2rem;
     color: #fefefe; }
+    .footer__copyright .paragraph {
+      margin: 0 auto;
+      width: 75%; }
 
 .grid {
   max-width: 120rem;

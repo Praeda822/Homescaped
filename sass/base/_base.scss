@@ -12,7 +12,7 @@ html {
   /*Defines what 1rem is. 10px/16px = 62.5%*/
 
   @include respond(phone) {
-    font-size: 50%;
+    font-size: 37.92%;
     .grid {
       grid-template-columns: repeat(1, 1fr); // 1 columns for smol screens
     }
@@ -21,7 +21,7 @@ html {
   @include respond(tab-port) {
     font-size: 56.25%;
     .grid {
-      grid-template-columns: repeat(2, 1fr); // 2 columns for medium screens
+      grid-template-columns: repeat(2, 1fr); // 1 columns for medium screens
     }
   }
 
