@@ -276,6 +276,15 @@ body {
     margin-top: 10vh; }
   .header__btn-box {
     margin-top: 47vh; }
+    @media (min-width: 56.3125em) and (max-width: 75em) {
+      .header__btn-box {
+        margin-top: 45vh; } }
+    @media (min-width: 37.5625em) and (max-width: 56.25em) {
+      .header__btn-box {
+        margin-top: 40vh; } }
+    @media (max-width: 37.5em) {
+      .header__btn-box {
+        margin-top: 35vh; } }
 
 .composition {
   width: 100%; }

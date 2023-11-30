@@ -18,5 +18,16 @@
 
   &__btn-box {
     margin-top: 47vh;
+
+    @include respond(tab-land) {
+      margin-top: 45vh;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 40vh;
+    }
+    @include respond(phone) {
+      margin-top: 35vh;
+    }
   }
 }
