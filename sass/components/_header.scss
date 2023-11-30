@@ -1,4 +1,5 @@
 .header {
+  overflow-x: hidden;
   flex-direction: column;
   height: 95vh;
   background-image: linear-gradient(
@@ -10,19 +11,12 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
-
-  &__logo-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__logo {
-    height: 30rem;
-  }
 
   &__text-box {
-    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 22.5vh;
   }
 }

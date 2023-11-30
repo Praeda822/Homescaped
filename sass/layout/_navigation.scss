@@ -1,5 +1,4 @@
 .navigation {
-  padding: 0 1.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -89,6 +88,11 @@
           &:link,
           &:visited {
             width: 66%;
+
+            @include respond(phone) {
+              width: 49%;
+            }
+
             font-size: 1.75rem;
             font-weight: 500;
             display: inline-block;
@@ -115,9 +119,30 @@
     }
   }
 
+  //Navigation height set via sizing of logo
   &__logo {
-    margin-right: 5rem;
-    height: 15rem;
+    overflow-x: hidden;
+    height: auto;
     width: auto;
+
+    @include respond(big-desktop) {
+      max-height: 30rem;
+    }
+
+    @include respond(desktop) {
+      max-height: 20rem;
+    }
+
+    @include respond(tab-land) {
+      max-height: 15rem;
+    }
+
+    @include respond(tab-port) {
+      max-height: 10rem;
+    }
+
+    @include respond(phone) {
+      max-height: 10rem;
+    }
   }
 }

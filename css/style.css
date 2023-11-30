@@ -127,12 +127,13 @@ body {
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1.3rem;
     animation: moveInRight 2.5s ease-out; }
     @media (max-width: 37.5em) {
       .heading-primary--sub {
-        letter-spacing: 0.5rem; } }
+        letter-spacing: 0.5rem;
+        font-size: 3rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -264,21 +265,19 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .header {
+  overflow-x: hidden;
   flex-direction: column;
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.8), rgba(160, 182, 198, 0.8)), url(../img/herojob.jpg);
   background-size: cover;
   background-position: center;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%); }
-  .header__logo-box {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .header__logo {
-    height: 30rem; }
+  position: relative; }
   .header__text-box {
-    margin: 0 auto; }
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 22.5vh; }
 
 .composition {
   width: 100%; }
@@ -439,7 +438,6 @@ body {
       grid-column: span 4; }
 
 .navigation {
-  padding: 0 1.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -508,6 +506,9 @@ body {
         border-radius: 3px;
         background-color: #fefefe;
         transition: 0.1s, background-color 0.1s; }
+        @media (max-width: 37.5em) {
+          .navigation__item--dropdown .dropdown .dropdown__item .dropdown__link:link, .navigation__item--dropdown .dropdown .dropdown__item .dropdown__link:visited {
+            width: 49%; } }
       .navigation__item--dropdown .dropdown .dropdown__item .dropdown__link:hover {
         color: #fff;
         background-image: radial-gradient(#1a1a1a, #000);
@@ -517,9 +518,24 @@ body {
         box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
         transform: translateY(-0.2rem); }
   .navigation__logo {
-    margin-right: 5rem;
-    height: 15rem;
+    overflow-x: hidden;
+    height: auto;
     width: auto; }
+    @media (min-width: 112.5em) {
+      .navigation__logo {
+        max-height: 30rem; } }
+    @media (min-width: 75.0625em) {
+      .navigation__logo {
+        max-height: 20rem; } }
+    @media (min-width: 56.3125em) and (max-width: 75em) {
+      .navigation__logo {
+        max-height: 15rem; } }
+    @media (min-width: 37.5625em) and (max-width: 56.25em) {
+      .navigation__logo {
+        max-height: 10rem; } }
+    @media (max-width: 37.5em) {
+      .navigation__logo {
+        max-height: 10rem; } }
 
 .section-about {
   width: 75%;
