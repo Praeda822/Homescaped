@@ -1,10 +1,11 @@
 .footer {
   background-color: $color-black;
-  padding: 10rem 0;
+  padding: 10rem 3rem;
   font-size: 1.4rem;
 
   &__logo-box {
     text-align: center;
+    margin: 0 auto;
   }
 
   &__logo {
@@ -12,8 +13,7 @@
   }
 
   &__navigation {
-    display: flex;
-    justify-content: space-around;
+    align-items: center;
   }
 
   &__list {

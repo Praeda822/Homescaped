@@ -1,155 +1,123 @@
 .navigation {
-  &__logo {
-    height: 30rem;
-  }
-  &__checkbox {
-    display: none;
+  padding: 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-black;
+  font-family: inherit;
+  box-shadow: 0 1rem 1rem rgba($color-black, 0.4);
+
+  &__checkbox,
+  &__button,
+  &__icon {
+    display: none; // none for desktop
   }
 
-  &__button {
-    background-color: $color-white;
-    height: 7rem;
-    width: 7rem;
-    position: fixed;
-    top: 6rem;
-    right: 6rem;
-    border-radius: 50%;
-    z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
-    transition: right 0.3s ease;
-  }
-
-  &__background {
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    position: fixed;
-    top: 6.5rem;
-    right: 6.5rem;
-    background-image: radial-gradient($color-black, $color-grey-dark-2);
-    z-index: 1000;
-    //transform to make button expand on click (kinda nauseating..)
-    //change to transform all for no circle
-    transition: transform all 0.6s;
-  }
-
-  &__nav {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1500;
-    visibility: hidden;
-    opacity: 0;
-    width: 0;
-    //Change to all for slide-in effect w/o circle
-    //Change to opacity for fade-in effect with circle
-    transition: opacity 0.6s;
+  &__navbar {
+    padding: 0.5rem 0;
+    justify-content: center;
+    border-top: 1px solid $color-primary-light;
+    margin: 0 auto;
+    width: 50%;
+    margin-left: 25%;
   }
 
   &__list {
-    @include centerHV;
     list-style: none;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
     width: 100%;
     padding: 0;
   }
 
   &__item {
-    margin: 1.5rem;
+    text-decoration: none;
+    position: relative;
+    &:hover,
+    &:focus-within {
+      .navigation__link {
+        transform: translateY(-0.3rem);
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+      }
+
+      .dropdown {
+        display: block; // Display dropdown on hover or focus within
+      }
+    }
   }
 
   &__link {
     &:link,
     &:visited {
       display: inline-block;
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       font-weight: 500;
       text-decoration: none;
       text-transform: uppercase;
-      color: $color-white;
+      color: $color-primary;
       transition: transform 0.3s, color 0.3s, box-shadow 0.3s;
     }
 
     &:hover {
       transform: translateY(-0.3rem);
-      color: $color-grey-dark-1;
+      color: $color-white;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     }
     &:active {
-      background-position: 100%;
       transform: translateY(-0.6rem);
-      transition: transform 0.3s;
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     }
   }
 
-  //NAV FUNCTIONALITY
-  &__checkbox:checked ~ &__background {
-    transform: scale(80);
-  }
-
-  &__checkbox:checked ~ &__nav {
-    opacity: 1;
-    visibility: visible;
-    width: 100%;
-  }
-
-  //to animate button animation on click
-  //   &__checkbox:checked + &__button {
-  //   }
-
-  //ICON
-  &__icon {
-    position: relative;
-    margin-top: 3.35rem;
-    &,
-    &::before,
-    &::after {
-      display: inline-block;
-      width: 3rem;
-      height: 2px;
-      background-color: $color-grey-dark-2;
-    }
-
-    &::before,
-    &::after {
-      content: "";
+  &__item--dropdown {
+    .dropdown {
+      padding: 0;
+      display: none; //  hidden
       position: absolute;
-      left: 0;
-      transition: all 0.2s;
+      background-color: $color-white;
+      box-shadow: 0 0.8rem 1.6rem rgba($color-black, 0.2);
+      border-radius: 3px;
+      z-index: 100;
+
+      .dropdown__item {
+        list-style: none;
+        text-align: center;
+
+        .dropdown__link {
+          &:link,
+          &:visited {
+            width: 66%;
+            font-size: 1.75rem;
+            font-weight: 500;
+            display: inline-block;
+            padding: 0.5rem 8rem;
+            color: $color-black;
+            text-decoration: none;
+            border-radius: 3px;
+            background-color: #fefefe;
+            transition: 0.1s, background-color 0.1s;
+          }
+
+          &:hover {
+            color: $color-white;
+            background-image: radial-gradient(#1a1a1a, $color-black);
+            box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.1);
+            transform: translateY(-0.1rem);
+          }
+          &:active {
+            box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.2);
+            transform: translateY(-0.2rem);
+          }
+        }
+      }
     }
-
-    &::before {
-      top: -0.8rem;
-      transform-origin: center;
-    }
-    &::after {
-      top: 0.8rem;
-      transform-origin: center;
-    }
   }
 
-  &__button:hover &__icon::before {
-    top: calc(-0.8rem - 0.2rem);
-  }
-
-  &__button:hover &__icon::after {
-    top: calc(0.8rem + 0.2rem);
-  }
-
-  &__checkbox:checked + &__button &__icon {
-    background-color: transparent;
-  }
-
-  &__checkbox:checked + &__button &__icon::before {
-    top: 50%;
-    transform: rotate(135deg);
-    background-color: $color-primary;
-  }
-
-  &__checkbox:checked + &__button &__icon::after {
-    top: 50%;
-    transform: rotate(-135deg);
-    background-color: $color-primary;
+  &__logo {
+    margin-right: 5rem;
+    height: 15rem;
+    width: auto;
   }
 }
