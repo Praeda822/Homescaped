@@ -491,25 +491,33 @@ body {
     .navigation__checkbox:checked ~ .navigation__mobile, .navigation__button, .navigation__icon {
       transform: scale(1.1); } }
   .navigation__checkbox:checked ~ .navigation__mobile {
-    width: 37%;
+    width: 35%;
     height: 100vh;
     opacity: 1;
     visibility: visible;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
-    padding: 15rem 0.5rem; }
-    .navigation__checkbox:checked ~ .navigation__mobile__list {
+    padding: 15rem 1.5rem; }
+    .navigation__checkbox:checked ~ .navigation__mobile .navigation__list {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-end;
       width: 100%;
       padding: 0; }
-    .navigation__checkbox:checked ~ .navigation__mobile__item {
-      width: 100%;
-      text-align: center;
-      margin: 1rem 0; }
+      .navigation__checkbox:checked ~ .navigation__mobile .navigation__list .navigation__item {
+        width: 100%;
+        text-align: right;
+        margin: 1rem 0; }
+        .navigation__checkbox:checked ~ .navigation__mobile .navigation__list .navigation__item--dropdown:hover .dropdown,
+        .navigation__checkbox:checked ~ .navigation__mobile .navigation__list .navigation__item--dropdown:focus-within .dropdown {
+          display: block;
+          position: absolute;
+          left: 105%;
+          top: 0;
+          transform: translateY(0);
+          width: 100%; }
   .navigation__icon {
     position: relative;
     margin-top: 3.5rem; }
@@ -564,7 +572,7 @@ body {
     left: 0;
     z-index: 1500;
     background-image: radial-gradient(#333, #000);
-    display: none; }
+    display: flex; }
     .navigation__mobile__list {
       list-style: none;
       display: flex;
@@ -595,7 +603,8 @@ body {
         align-items: center; } }
   .navigation__item {
     text-decoration: none;
-    position: relative; }
+    position: relative;
+    border-bottom: 1px solid #a0b6c6; }
     .navigation__item:hover .navigation__link, .navigation__item:focus-within .navigation__link {
       transform: translateY(-0.3rem);
       color: #fff;
@@ -636,6 +645,7 @@ body {
         padding: 0.5rem 8rem;
         color: #000;
         text-decoration: none;
+        text-align: center;
         border-radius: 3px;
         background-color: #fefefe;
         transition: 0.1s, background-color 0.1s; }
