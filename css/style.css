@@ -122,7 +122,7 @@ body {
     animation: moveInLeft 2.5s ease-out; }
     @media (max-width: 37.5em) {
       .heading-primary--main {
-        letter-spacing: 1rem;
+        letter-spacing: 0.5rem;
         font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
@@ -151,8 +151,13 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: #777777;
-  text-align: center;
-  flex: 0 0 20%; }
+  text-align: center; }
+  .heading-tertiary__testimonial {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.6rem;
+    width: 47%;
+    border-bottom: 1px solid #a0b6c6; }
   .heading-tertiary__footer {
     text-transform: uppercase;
     color: #fefefe;
@@ -272,6 +277,7 @@ body {
   background-position: center;
   position: relative; }
   .header__text-box {
+    padding: 0 2.5rem;
     text-align: center;
     margin-top: 10vh; }
   .header__btn-box {
@@ -374,6 +380,38 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
+
+.testimonial__box {
+  background-color: #fff;
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95%; }
+  @media (max-width: 37.5em) {
+    .testimonial__box {
+      width: 50%;
+      margin: 0 auto; } }
+  @media (min-width: 37.5625em) and (max-width: 56.25em) {
+    .testimonial__box {
+      width: 75%;
+      margin: 0 auto; } }
+  @media (min-width: 56.3125em) and (max-width: 75em) {
+    .testimonial__box {
+      width: 75%;
+      margin: 0 auto; } }
+
+.testimonial__quote {
+  align-self: flex-start;
+  margin-bottom: 3.5rem; }
+
+.testimonial__info {
+  align-self: flex-end;
+  width: 100%;
+  margin-top: auto; }
 
 .footer {
   background-color: #000;
@@ -697,3 +735,8 @@ body {
   .contact__form {
     width: 50%;
     padding: 4rem; }
+
+.section-testimonial {
+  background-color: #fefefe;
+  padding: 9rem 0;
+  width: 100%; }
