@@ -2,7 +2,7 @@
   &__box {
     background-color: $color-white;
     font-size: 1.5rem;
-    padding: 2.5rem;
+    padding: 3rem;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     display: flex;
@@ -27,14 +27,11 @@
   }
   &__quote {
     align-self: flex-start;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4.5rem;
   }
 
   &__content {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // text-align: center;
+    text-align: center;
   }
 
   &__info {

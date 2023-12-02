@@ -11,6 +11,7 @@
     color: $color-grey-dark;
     padding: 1rem;
     border-radius: 0.4rem;
+    min-height: 10rem;
 
     &--1-col {
       grid-column: span 1;

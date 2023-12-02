@@ -8,5 +8,17 @@
   &__photo {
     width: 75%;
     height: auto;
+
+    @include respond(tab-port) {
+      max-width: 50%;
+    }
+
+    @include respond(tab-land) {
+      max-width: 55%;
+    }
+
+    @include respond(desktop) {
+      max-width: 75%;
+    }
   }
 }
