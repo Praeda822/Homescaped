@@ -9,20 +9,12 @@
     width: 100%;
     height: auto;
 
-    &--second {
-      @include respond(tab-port) {
-        width: 100%;
-        max-width: none;
-      }
-
-      @include respond(desktop) {
-        max-width: 100%;
-        height: auto;
-        margin-left: -5%;
-      }
+    @include respond(phone) {
+      width: 60%;
     }
+
     @include respond(tab-port) {
-      max-width: 65%;
+      width: 100%;
     }
 
     @include respond(tab-land) {
