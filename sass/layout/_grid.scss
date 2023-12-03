@@ -3,7 +3,7 @@
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr; /* Default to 1 columns */
+  grid-template-columns: repeat(auto - fit, minmax(25rem, 1fr));
   gap: 3rem;
 
   &__item {

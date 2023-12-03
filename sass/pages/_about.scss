@@ -1,0 +1,42 @@
+.section-about {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.1);
+  padding: 6rem 0;
+
+  @include respond(tab-port) {
+    padding: 15rem 0;
+  }
+
+  .grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(25rem, 1fr));
+    gap: 10rem;
+    align-items: center;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr; // single-file stack
+    }
+
+    .grid__item {
+      &--2-cols {
+        @include respond(tab-port) {
+          grid-column: span 1;
+        }
+        @include respond(phone) {
+          grid-column: span 1;
+        }
+      }
+      &--4-cols {
+        @include respond(tab-land) {
+          grid-column: span 4;
+        }
+        @include respond(tab-port) {
+          grid-column: span 1;
+        }
+      }
+    }
+  }
+}

@@ -9,49 +9,43 @@
 
 html {
   font-size: 62.5%;
-  /*Defines what 1rem is. 10px/16px = 62.5%*/
+  // 1rem = 10px - 10px/16px = 62.5%*
 
   @include respond(phone) {
     font-size: 37.92%;
-    .grid {
-      grid-template-columns: repeat(1, 1fr); // 1 columns for smol screens
-    }
-  }
-
-  @include respond(tab-port) {
-    font-size: 43.75%;
-    .grid {
-      grid-template-columns: repeat(2, 1fr); // 1 columns for medium screens
-    }
-  }
-
-  @include respond(tab-land) {
-    font-size: 50%;
-    .grid {
-      grid-template-columns: repeat(2, 1fr); // 2 columns for big-smol screens
-    }
-  }
-
-  @include respond(desktop) {
-    font-size: 56.25%;
-    .grid {
-      grid-template-columns: repeat(
-        2,
-        1fr
-      ); // 2 columns for extra-large screens
-    }
-  }
-
-  @include respond(big-desktop) {
-    font-size: 70%;
-    .grid {
-      grid-template-columns: repeat(
-        4,
-        1fr
-      ); // 4 columns for extra-large screens
-    }
+    //1rem = 6px
+    grid-template-columns: repeat(1, 1fr); // 1 columns for smol screens
   }
 }
+
+@include respond(tab-port) {
+  font-size: 43.75%;
+  .grid {
+    grid-template-columns: repeat(2, 1fr); // 1 columns for medium screens
+  }
+}
+
+@include respond(tab-land) {
+  font-size: 50%;
+  .grid {
+    grid-template-columns: repeat(2, 1fr); // 2 columns for big-smol screens
+  }
+}
+
+@include respond(desktop) {
+  font-size: 56.25%;
+  .grid {
+    grid-template-columns: repeat(2, 1fr); // 2 columns for extra-large screens
+  }
+}
+
+@include respond(big-desktop) {
+  font-size: 70%;
+  .grid {
+    grid-template-columns: repeat(4, 1fr); // 4 columns for extra-large screens
+  }
+}
+
 body {
   box-sizing: border-box;
   padding: 1.5rem;
