@@ -511,7 +511,8 @@ body {
   .navigation__logo {
     overflow-x: hidden;
     height: auto;
-    width: auto; }
+    width: auto;
+    padding-right: 3rem; }
     @media (min-width: 112.5em) {
       .navigation__logo {
         max-height: 30rem; } }
@@ -527,11 +528,15 @@ body {
     @media (max-width: 37.5em) {
       .navigation__logo {
         max-height: 10rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__cta .btn {
+      font-size: 1.5rem;
+      padding: 1.5rem 3rem; } }
   .navigation__checkbox {
     display: none; }
   @media (max-width: 37.5em) {
     .navigation {
-      justify-content: center; } }
+      justify-content: flex-end; } }
   @media (min-width: 37.5625em) and (max-width: 56.25em) {
     .navigation {
       justify-content: center; } }
