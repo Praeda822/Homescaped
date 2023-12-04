@@ -12,7 +12,7 @@
     overflow-x: hidden; //it doesn't, but just in case
     height: auto;
     width: auto;
-    padding-right: 1.5rem;
+    padding-right: 2rem;
 
     @include respond(big-desktop) {
       max-height: 30rem;
@@ -35,7 +35,7 @@
     }
   }
   &__cta {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     .btn {
       @include respond(phone) {
         font-size: 1.4rem;
