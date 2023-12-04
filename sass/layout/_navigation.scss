@@ -12,7 +12,7 @@
     overflow-x: hidden; //it doesn't, but just in case
     height: auto;
     width: auto;
-    padding-right: 1rem;
+    padding-right: 0.5rem;
 
     @include respond(big-desktop) {
       max-height: 30rem;
@@ -50,11 +50,11 @@
   }
 
   @include respond(phone) {
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   @include respond(tab-port) {
-    justify-content: center;
+    justify-content: flex-end;
   }
   &__navbar {
     display: none; //hidden on mobiles
@@ -64,7 +64,7 @@
   }
 
   @include respond(tab-land) {
-    justify-content: center;
+    justify-content: flex-end;
     &__navbar {
       display: none;
     }
@@ -193,6 +193,10 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     transition: right 0.3s ease;
     z-index: 2000;
+
+    @include respond(tab-land) {
+      top: 4rem;
+    }
   }
 
   &__mobile {
