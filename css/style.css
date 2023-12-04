@@ -503,16 +503,16 @@ body {
 .navigation {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #000;
   font-family: inherit;
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  margin: 0 auto; }
   .navigation__logo {
     overflow-x: hidden;
     height: auto;
-    width: auto;
-    padding-right: 0.5rem; }
+    width: auto; }
     @media (min-width: 112.5em) {
       .navigation__logo {
         max-height: 30rem; } }
@@ -529,30 +529,22 @@ body {
       .navigation__logo {
         max-height: 10rem; } }
   .navigation__cta {
-    padding: 0 0.5rem; }
+    padding: 0 2.5rem; }
     @media (max-width: 37.5em) {
       .navigation__cta .btn {
         font-size: 1.4rem;
         padding: 1.5rem 2rem; } }
   .navigation__checkbox {
     display: none; }
-  @media (max-width: 37.5em) {
-    .navigation {
-      justify-content: flex-end; } }
-  @media (min-width: 37.5625em) and (max-width: 56.25em) {
-    .navigation {
-      justify-content: flex-end; } }
   .navigation__navbar {
     display: none; }
   .navigation__button {
     display: inline-block; }
   @media (min-width: 56.3125em) and (max-width: 75em) {
-    .navigation {
-      justify-content: flex-end; }
-      .navigation__navbar {
-        display: none; }
-      .navigation__button {
-        display: inline-block; } }
+    .navigation__navbar {
+      display: none; }
+    .navigation__button {
+      display: inline-block; } }
   @media (min-width: 75.0625em) {
     .navigation__navbar {
       display: flex; }
@@ -623,9 +615,6 @@ body {
     transform: rotate(-135deg);
     background-color: #777777; }
   .navigation__button {
-    position: fixed;
-    top: 2rem;
-    left: 1.5rem;
     height: 7rem;
     width: 7rem;
     border-radius: 25%;
