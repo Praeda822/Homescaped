@@ -1,13 +1,11 @@
 .navigation {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: $color-black;
   font-family: inherit;
   box-shadow: 0 1rem 1rem rgba($color-black, 0.1);
-
-  //
 
   //Navigation height defined via logo size
   &__logo {
@@ -35,14 +33,22 @@
       max-height: 10rem;
     }
   }
-
+  &__logo-box {
+    @include respond(phone) {
+    }
+  }
   //NAV FUNCTIONALITY
 
   &__checkbox {
     display: none;
   }
 
+  @include respond(phone) {
+    justify-content: center;
+  }
+
   @include respond(tab-port) {
+    justify-content: center;
   }
   &__navbar {
     display: none; //hidden on mobiles
@@ -52,11 +58,12 @@
   }
 
   @include respond(tab-land) {
+    justify-content: center;
     &__navbar {
-      display: flex;
+      display: none;
     }
     &__button {
-      display: none;
+      display: inline-block;
     }
   }
 
@@ -209,9 +216,7 @@
     padding: 0.5rem 0;
     justify-content: center;
     border-top: 1px solid $color-primary-light;
-    margin: 0 auto;
     width: 50%;
-    margin-left: 25%;
   }
 
   &__list {

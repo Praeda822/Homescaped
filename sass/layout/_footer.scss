@@ -4,6 +4,10 @@
   font-size: 1.4rem;
   align-items: center;
 
+  @include respond(phone) {
+    padding: 0 0.5rem;
+  }
+
   &__logo-box {
     text-align: center;
     margin: 0 auto;

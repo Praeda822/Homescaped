@@ -26,7 +26,7 @@ html {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media (min-width: 56.3125em) and (max-width: 75em) {
-  font-size: 50%;
+  font-size: 47.5%;
   .grid {
     grid-template-columns: repeat(2, 1fr); } }
 
@@ -432,6 +432,9 @@ body {
   padding: 10rem 3rem;
   font-size: 1.4rem;
   align-items: center; }
+  @media (max-width: 37.5em) {
+    .footer {
+      padding: 0 0.5rem; } }
   .footer__logo-box {
     text-align: center;
     margin: 0 auto; }
@@ -500,7 +503,7 @@ body {
 .navigation {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #000;
   font-family: inherit;
@@ -526,15 +529,23 @@ body {
         max-height: 10rem; } }
   .navigation__checkbox {
     display: none; }
+  @media (max-width: 37.5em) {
+    .navigation {
+      justify-content: center; } }
+  @media (min-width: 37.5625em) and (max-width: 56.25em) {
+    .navigation {
+      justify-content: center; } }
   .navigation__navbar {
     display: none; }
   .navigation__button {
     display: inline-block; }
   @media (min-width: 56.3125em) and (max-width: 75em) {
-    .navigation__navbar {
-      display: flex; }
-    .navigation__button {
-      display: none; } }
+    .navigation {
+      justify-content: center; }
+      .navigation__navbar {
+        display: none; }
+      .navigation__button {
+        display: inline-block; } }
   @media (min-width: 75.0625em) {
     .navigation__navbar {
       display: flex; }
@@ -637,9 +648,7 @@ body {
     padding: 0.5rem 0;
     justify-content: center;
     border-top: 1px solid #a0b6c6;
-    margin: 0 auto;
-    width: 50%;
-    margin-left: 25%; }
+    width: 50%; }
   .navigation__list {
     list-style: none;
     display: flex;
