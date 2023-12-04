@@ -1,5 +1,4 @@
 .navigation {
-  margin: 0 auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -13,7 +12,7 @@
     overflow-x: hidden; //it doesn't, but just in case
     height: auto;
     width: auto;
-    padding-right: auto;
+    padding-right: 1rem;
 
     @include respond(big-desktop) {
       max-height: 30rem;
@@ -51,7 +50,7 @@
   }
 
   @include respond(phone) {
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   @include respond(tab-port) {

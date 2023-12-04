@@ -501,7 +501,6 @@ body {
       grid-column: span 4; }
 
 .navigation {
-  margin: 0 auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -513,7 +512,7 @@ body {
     overflow-x: hidden;
     height: auto;
     width: auto;
-    padding-right: auto; }
+    padding-right: 1rem; }
     @media (min-width: 112.5em) {
       .navigation__logo {
         max-height: 30rem; } }
@@ -539,7 +538,7 @@ body {
     display: none; }
   @media (max-width: 37.5em) {
     .navigation {
-      justify-content: flex-end; } }
+      justify-content: center; } }
   @media (min-width: 37.5625em) and (max-width: 56.25em) {
     .navigation {
       justify-content: center; } }
