@@ -512,7 +512,7 @@ body {
     overflow-x: hidden;
     height: auto;
     width: auto;
-    padding-right: 1.5rem; }
+    padding-right: 1rem; }
     @media (min-width: 112.5em) {
       .navigation__logo {
         max-height: 30rem; } }
