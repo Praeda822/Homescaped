@@ -501,14 +501,14 @@ body {
       grid-column: span 4; }
 
 .navigation {
+  margin-left: auto;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #000;
   font-family: inherit;
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
-  margin: 0 auto; }
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1); }
   .navigation__logo {
     overflow-x: hidden;
     height: auto;
@@ -529,7 +529,7 @@ body {
       .navigation__logo {
         max-height: 10rem; } }
   .navigation__cta {
-    padding: 0 2.5rem; }
+    padding-left: 1rem; }
     @media (max-width: 37.5em) {
       .navigation__cta .btn {
         font-size: 1.4rem;
