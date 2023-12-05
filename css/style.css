@@ -43,7 +43,7 @@ html {
 body {
   box-sizing: border-box;
   padding: 1.5rem;
-  overflow: hidden; }
+  overflow-x: hidden; }
   @media (max-width: 37.5em) {
     body {
       padding: 0;
@@ -933,7 +933,3 @@ body {
     @media (max-width: 37.5em) {
       .section-about .grid .grid__item--4-cols {
         grid-column: span 1; } }
-
-.section-services {
-  padding: 0;
-  width: 100%; }
