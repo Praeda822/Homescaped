@@ -1,10 +1,9 @@
 .gallery {
   position: relative;
   width: 75%;
-  margin: 2.5rem;
+  margin: 1.5rem;
   flex-grow: 1;
   margin: 0 auto;
-
   @include respond(phone) {
     width: 100%;
     margin: 0;
@@ -84,5 +83,9 @@
     color: #eee;
     transform: translate(0, -50%);
     display: none;
+
+    @include respond(phone) {
+      left: 1rem;
+    }
   }
 }

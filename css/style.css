@@ -167,7 +167,8 @@ body {
     line-height: 1.5; }
     @media (max-width: 37.5em) {
       .heading-tertiary__gallery {
-        font-size: 3rem; } }
+        font-size: 3rem;
+        margin-bottom: 5rem; } }
   .heading-tertiary__testimonial {
     font-style: italic;
     font-weight: 600;
@@ -487,7 +488,7 @@ body {
 .gallery {
   position: relative;
   width: 75%;
-  margin: 2.5rem;
+  margin: 1.5rem;
   flex-grow: 1;
   margin: 0 auto; }
   @media (max-width: 37.5em) {
@@ -556,6 +557,9 @@ body {
     color: #eee;
     transform: translate(0, -50%);
     display: none; }
+    @media (max-width: 37.5em) {
+      .item .content {
+        left: 1rem; } }
 
 .footer {
   background-color: #000;
@@ -927,5 +931,5 @@ body {
         grid-column: span 1; } }
 
 .section-services {
-  padding: 6rem 0;
+  padding: 0;
   width: 100%; }
