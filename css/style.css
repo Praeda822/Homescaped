@@ -168,7 +168,7 @@ body {
     @media (max-width: 37.5em) {
       .heading-tertiary__gallery {
         font-size: 3rem;
-        margin-bottom: 5rem; } }
+        margin-bottom: 3rem; } }
   .heading-tertiary__testimonial {
     font-style: italic;
     font-weight: 600;
