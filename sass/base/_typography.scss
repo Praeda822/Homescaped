@@ -17,7 +17,7 @@ body {
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 2rem;
-
+    text-align: center;
     animation: moveInLeft 2.5s ease-out;
 
     @include respond(phone) {
@@ -63,7 +63,16 @@ body {
   font-weight: 700;
   color: $color-grey-dark;
   text-align: center;
-
+  &__gallery {
+    font-size: 4rem;
+    font-weight: 700;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 1 forwards;
+    line-height: 1.5;
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
   &__testimonial {
     font-style: italic;
     font-weight: 600;
@@ -92,10 +101,21 @@ body {
 }
 
 .paragraph {
-  font-size: 1.65rem;
+  font-size: 1.4rem;
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
   padding: 0.6rem 0;
   border-top: 1px solid $color-primary-light;
+
+  &__gallery {
+    color: $color-white;
+    margin: 2rem 0;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+
+    @include respond(phone) {
+      width: 65%;
+    }
+  }
 }

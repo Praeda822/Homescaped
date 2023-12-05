@@ -10,15 +10,9 @@
   }
 
   .grid {
-    display: grid;
     width: 95%;
-    grid-template-columns: repeat(2, minmax(25rem, 1fr));
     gap: 5rem;
     align-items: center;
-
-    @include respond(phone) {
-      grid-template-columns: 1fr; // single-file stack
-    }
 
     .grid__item {
       &--2-cols {
@@ -31,10 +25,10 @@
       }
       &--4-cols {
         @include respond(tab-land) {
-          grid-column: span 4;
+          grid-column: span 2;
         }
         @include respond(tab-port) {
-          grid-column: span 1;
+          grid-column: span 2;
         }
         @include respond(phone) {
           grid-column: span 1;

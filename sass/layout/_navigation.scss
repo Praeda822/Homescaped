@@ -77,7 +77,15 @@
   &__checkbox:checked ~ &__mobile,
   &__button,
   &__icon {
+    @include respond(phone) {
+      transform: scale(1.05);
+    }
+
     @include respond(tab-port) {
+      transform: scale(1.1);
+    }
+
+    @include respond(tab-land) {
       transform: scale(1.1);
     }
   }
@@ -129,7 +137,7 @@
       display: inline-block;
       width: 3rem;
       height: 2px;
-      background-color: $color-grey-dark-2;
+      background-color: $color-white;
     }
 
     &::before,
@@ -165,21 +173,18 @@
   &__checkbox:checked + &__button &__icon::before {
     top: 50%;
     transform: rotate(135deg);
-    background-color: $color-primary;
+    background-color: $color-white;
   }
 
   &__checkbox:checked + &__button &__icon::after {
     top: 50%;
     transform: rotate(-135deg);
-    background-color: $color-primary;
+    background-color: $color-white;
   }
 
   &__button {
     height: 7rem;
     width: 7rem;
-    border-radius: 25%;
-    background-color: $color-white;
-    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     transition: right 0.3s ease;
     z-index: 2000;
 
@@ -197,7 +202,8 @@
     top: 0;
     left: 0;
     z-index: 1500;
-    background-image: radial-gradient($color-grey-dark-2, $color-black);
+    background-color: $color-black;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
 
     display: flex;
 
@@ -268,7 +274,7 @@
 
     &:hover {
       transform: translateY(-0.3rem);
-      color: $color-white;
+      color: $color-grey-dark;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     }
     &:active {
@@ -282,9 +288,9 @@
       padding: 0;
       display: none; //  hidden
       position: absolute;
-      background-color: $color-white;
+      background-color: transparent;
       box-shadow: 0 0.8rem 1.6rem rgba($color-black, 0.2);
-      border-radius: 3px;
+      border-radius: 1px;
       z-index: 100;
 
       .dropdown__item {
@@ -303,12 +309,13 @@
             font-weight: 500;
             display: inline-block;
             padding: 0.5rem 8rem;
-            color: $color-black;
+            color: $color-primary;
             text-decoration: none;
             text-align: center;
-            border-radius: 3px;
-            background-color: #fefefe;
+            border-radius: 1px;
+            background-color: $color-white;
             transition: 0.1s, background-color 0.1s;
+            border: 1px solid $color-white;
           }
 
           &:hover {

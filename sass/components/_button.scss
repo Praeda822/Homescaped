@@ -4,13 +4,11 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-
+    font-weight: 700;
     padding: 2rem 4rem;
     display: inline-block;
-    border-radius: 10rem;
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
-    font-size: $default-font-size;
 
     border: none;
     cursor: pointer;
@@ -18,7 +16,7 @@
 
   &:hover {
     /* STAY WHERE YOU ARE DAMN YOU */
-    transform: translateY(-0.3rem);
+    transform: translateY(-0.2rem);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
   }
 
@@ -27,7 +25,7 @@
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 10rem;
+    border-radius: 2px;
     position: absolute;
     top: 0;
     left: 0;
@@ -45,7 +43,21 @@
 
   &--white {
     background-color: $color-white;
-    color: $color-grey-dark;
+    color: $color-black;
+    border: 3px solid $color-black;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+      border: 2px solid $color-white;
+    }
+  }
+
+  &--gallery {
+    padding: 10px 20px;
+    border: none;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.6s 1 forwards;
   }
 
   &--animated {
@@ -76,5 +88,31 @@
   &:active {
     transform: translateY(0.1rem);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 222222;
+  text-align: center;
+  width: 100%;
+
+  @include respond(phone) {
+    transform: translate(-25%, -70%);
+  }
+
+  button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid $color-primary-light;
+    transition: 0.5s;
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
   }
 }
