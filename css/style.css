@@ -901,6 +901,9 @@ body {
         .section-testimonial .grid .grid__item--2-cols {
           grid-column: span 1; } }
 
+.section-gallery {
+  overflow-x: hidden; }
+
 .section-about {
   width: 100%;
   margin: 0 auto;
