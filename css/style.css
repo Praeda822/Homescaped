@@ -559,7 +559,7 @@ body {
     display: none; }
     @media (max-width: 37.5em) {
       .item .content {
-        left: 1rem; } }
+        left: 2rem; } }
 
 .footer {
   background-color: #000;

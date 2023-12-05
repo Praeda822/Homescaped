@@ -85,7 +85,7 @@
     display: none;
 
     @include respond(phone) {
-      left: 1rem;
+      left: 2rem;
     }
   }
 }
