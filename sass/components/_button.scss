@@ -5,7 +5,6 @@
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 600;
-    padding: 2rem 4rem;
     display: inline-block;
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -64,6 +63,11 @@
     /* Animation starts 0.75s after page load to sync with keyframes */
     animation-fill-mode: backwards;
     /* Starts my animation from beginning */
+  }
+
+  &--contact {
+    padding: 10px 20px;
+    border: none;
   }
 }
 

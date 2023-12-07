@@ -42,7 +42,8 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 1.5rem; }
+  padding: 1.5rem;
+  background-color: #fefefe; }
   @media (max-width: 37.5em) {
     body {
       padding: 0;
@@ -236,7 +237,6 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
-  padding: 2rem 4rem;
   display: inline-block;
   position: relative;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -285,6 +285,10 @@ body {
   /* Animation starts 0.75s after page load to sync with keyframes */
   animation-fill-mode: backwards;
   /* Starts my animation from beginning */ }
+
+.btn--contact {
+  padding: 10px 20px;
+  border: none; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
@@ -917,13 +921,13 @@ body {
       padding: 15rem 0; } }
 
 .section-contact {
-  padding: 15rem 0;
+  margin: 15rem 0;
   background-image: linear-gradient(to right bottom, rgba(160, 182, 198, 0.8), rgba(55, 76, 92, 0.8)), url(../img/herojob.jpg);
   background-size: cover;
   background-position: center; }
 
 .contact {
-  width: 90%;
+  width: 100%;
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55.5%, transparent 50%), url(../img/sydneyharb-1.jpg);
   background-size: cover;
   border-radius: 3px;
