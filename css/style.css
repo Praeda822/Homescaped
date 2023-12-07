@@ -490,11 +490,11 @@ body {
   margin: 0 auto; }
   .gallery .container {
     position: relative;
-    width: 95%;
+    width: 90%;
     height: 90vh;
     margin: auto;
     background-color: #fff;
-    box-shadow: 0 1.5rem 3rem #000; }
+    box-shadow: 0 1rem 1.5rem #000; }
     .gallery .container__slide {
       width: max-content;
       margin-top: 5rem; }
@@ -516,7 +516,7 @@ body {
     .item {
       width: 35%;
       height: 50%;
-      transform: translate(20%, -50%); } }
+      transform: translate(22.5%, -50%); } }
   @media (min-width: 37.5625em) and (max-width: 56.25em) {
     .item {
       width: 35%;
@@ -585,7 +585,7 @@ body {
   .item .content {
     position: absolute;
     top: 50%;
-    left: 5rem;
+    left: 2.5rem;
     width: 30rem;
     text-align: left;
     padding: 0;
@@ -594,16 +594,18 @@ body {
     display: none; }
     @media (max-width: 37.5em) {
       .item .content {
-        width: 35%; } }
+        width: 35%;
+        left: 1.5rem; } }
     @media (min-width: 37.5625em) and (max-width: 56.25em) {
       .item .content {
-        width: 35%; } }
+        width: 35%;
+        left: 1.5rem; } }
     @media (min-width: 75.0625em) {
       .item .content {
-        left: 10rem; } }
+        left: 5rem; } }
     @media (min-width: 112.5em) {
       .item .content {
-        left: 10rem; } }
+        left: 5rem; } }
 
 .footer {
   background-color: #000;
