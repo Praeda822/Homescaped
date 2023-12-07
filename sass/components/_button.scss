@@ -101,7 +101,8 @@
   width: 100%;
 
   @include respond(phone) {
-    transform: translate(-25%, -70%);
+    width: 50%;
+    transform: translate(5%, -100%);
   }
 
   button {
