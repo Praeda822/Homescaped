@@ -114,5 +114,9 @@ body {
     margin: 2rem 0;
     opacity: 0;
     animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+
+    @include respond(tab-port) {
+      width: 75%;
+    }
   }
 }

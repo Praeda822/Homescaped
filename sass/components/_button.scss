@@ -99,11 +99,6 @@
   text-align: center;
   width: 100%;
 
-  @include respond(phone) {
-    width: 50%;
-    transform: translate(5%, -150%);
-  }
-
   button {
     width: 5rem;
     height: 5rem;
