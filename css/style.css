@@ -17,28 +17,28 @@ html {
   font-size: 62.5%; }
   @media (max-width: 37.5em) {
     html {
-      font-size: 37.92%;
+      font-size: 43.75%;
       grid-template-columns: repeat(1, 1fr); } }
-
-@media (min-width: 37.5625em) and (max-width: 56.25em) {
-  font-size: 43.75%;
-  .grid {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media (min-width: 56.3125em) and (max-width: 75em) {
-  font-size: 47.5%;
-  .grid {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media (min-width: 75.0625em) {
-  font-size: 56.25%;
-  .grid {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media (min-width: 112.5em) {
-  font-size: 70%;
-  .grid {
-    grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 37.5625em) and (max-width: 56.25em) {
+    html {
+      font-size: 47.5%; }
+      html .grid {
+        grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 56.3125em) and (max-width: 75em) {
+    html {
+      font-size: 50%; }
+      html .grid {
+        grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 75.0625em) {
+    html {
+      font-size: 75%; }
+      html .grid {
+        grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 87.5%; }
+      html .grid {
+        grid-template-columns: repeat(4, 1fr); } }
 
 body {
   box-sizing: border-box;
@@ -160,14 +160,14 @@ body {
   color: #333;
   text-align: center; }
   .heading-tertiary__gallery {
-    font-size: 4rem;
+    font-size: 2.75rem;
     font-weight: 700;
     opacity: 0;
     animation: showcontent 1s ease-in-out 1 forwards;
     line-height: 1.5; }
     @media (max-width: 37.5em) {
       .heading-tertiary__gallery {
-        font-size: 3rem;
+        font-size: 1.75rem;
         margin-bottom: 3rem; } }
   .heading-tertiary__testimonial {
     font-style: italic;
@@ -192,14 +192,13 @@ body {
         width: 75%; } }
 
 .paragraph {
-  font-size: 1.4rem;
   padding: 0.6rem 0;
   border-top: 1px solid #a0b6c6; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
   .paragraph__gallery {
     color: #fff;
-    font-weight: 300;
+    font-weight: 500;
     margin: 2rem 0;
     opacity: 0;
     animation: showcontent 1s ease-in-out 0.3s 1 forwards; }
@@ -233,7 +232,7 @@ body {
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   padding: 2rem 4rem;
   display: inline-block;
   position: relative;
@@ -266,8 +265,7 @@ body {
 
 .btn--white {
   background-color: #fff;
-  color: #000;
-  border: 3px solid #000; }
+  color: #333; }
   .btn--white:hover {
     background-color: #000;
     color: #fff;
@@ -313,7 +311,7 @@ body {
   @media (max-width: 37.5em) {
     .buttons {
       width: 50%;
-      transform: translate(5%, -100%); } }
+      transform: translate(5%, -150%); } }
   .buttons button {
     width: 5rem;
     height: 5rem;
@@ -387,7 +385,7 @@ body {
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
   @media (max-width: 37.5em) {
     .feature-box {
-      width: 50%;
+      width: 55%;
       margin: 0 auto; } }
   @media (min-width: 37.5625em) and (max-width: 56.25em) {
     .feature-box {
@@ -486,32 +484,21 @@ body {
 
 .gallery {
   position: relative;
-  width: 75%;
+  width: 100%;
+  height: 100%;
   margin: 1.5rem;
   flex-grow: 1;
   margin: 0 auto; }
-  @media (max-width: 37.5em) {
-    .gallery {
-      width: 100%;
-      margin: 0; } }
-  @media (min-width: 37.5625em) and (max-width: 56.25em) {
-    .gallery {
-      width: 100%;
-      margin: 0; } }
-  @media (min-width: 56.3125em) and (max-width: 75em) {
-    .gallery {
-      width: 100%;
-      margin: 0; } }
-
-.container {
-  width: 100%;
-  height: 60rem;
-  margin: auto;
-  background-color: #fff;
-  box-shadow: 0 1.5rem 3rem #000; }
-  .container__slide {
-    width: max-content;
-    margin-top: 5rem; }
+  .gallery .container {
+    position: relative;
+    width: 100%;
+    height: 60rem;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 1.5rem 3rem #000; }
+    .gallery .container__slide {
+      width: max-content;
+      margin-top: 5rem; }
 
 .item {
   width: 20rem;
@@ -523,14 +510,18 @@ body {
   position: absolute;
   z-index: 1;
   top: 50%;
-  transform: translate(0, -50%);
-  border-radius: 20px;
+  transform: translateY(-50%);
+  border-radius: 2rem;
   box-shadow: 0 1.5rem 3rem #000; }
   @media (max-width: 37.5em) {
     .item {
       width: 35%;
+      height: 50%; } }
+  @media (min-width: 37.5625em) and (max-width: 56.25em) {
+    .item {
+      width: 35%;
       height: 60%;
-      transform: translate(0, -50%); } }
+      transform: translate(25%, -50%); } }
   .item:nth-child(1), .item:nth-child(2) {
     left: 0;
     top: 0;
@@ -549,12 +540,9 @@ body {
       background: rgba(0, 0, 0, 0.335);
       z-index: 1; }
   .item:nth-child(3) {
-    left: 50%; }
-    @media (max-width: 37.5em) {
-      .item:nth-child(3) {
-        left: 60%; } }
+    left: 60%; }
   .item:nth-child(4) {
-    left: calc(50% + 220px); }
+    left: calc(55% + 220px); }
   .item:nth-child(5) {
     left: calc(50% + 440px); }
   .item:nth-child(n + 6) {
@@ -567,13 +555,19 @@ body {
   .item .content {
     position: absolute;
     top: 50%;
-    left: 5rem;
+    left: 2.5rem;
     width: 30rem;
     text-align: left;
     padding: 0;
     color: #eee;
     transform: translate(0, -50%);
     display: none; }
+    @media (max-width: 37.5em) {
+      .item .content {
+        width: 35%; } }
+    @media (min-width: 37.5625em) and (max-width: 56.25em) {
+      .item .content {
+        width: 35%; } }
 
 .footer {
   background-color: #000;
@@ -891,7 +885,7 @@ body {
   background-position: center; }
 
 .contact {
-  width: 99%;
+  width: 90%;
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55.5%, transparent 50%), url(../img/sydneyharb-1.jpg);
   background-size: cover;
   border-radius: 3px;

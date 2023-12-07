@@ -64,13 +64,13 @@ body {
   color: $color-grey-dark;
   text-align: center;
   &__gallery {
-    font-size: 4rem;
+    font-size: 2.75rem;
     font-weight: 700;
     opacity: 0;
     animation: showcontent 1s ease-in-out 1 forwards;
     line-height: 1.5;
     @include respond(phone) {
-      font-size: 3rem;
+      font-size: 1.75rem;
       margin-bottom: 3rem;
     }
   }
@@ -102,7 +102,6 @@ body {
 }
 
 .paragraph {
-  font-size: 1.4rem;
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
@@ -111,7 +110,7 @@ body {
 
   &__gallery {
     color: $color-white;
-    font-weight: 300;
+    font-weight: 500;
     margin: 2rem 0;
     opacity: 0;
     animation: showcontent 1s ease-in-out 0.3s 1 forwards;
