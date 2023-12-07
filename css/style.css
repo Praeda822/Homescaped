@@ -519,7 +519,7 @@ body {
   @media (max-width: 37.5em) {
     .item {
       width: 35%;
-      height: 50%;
+      height: 40%;
       transform: translate(22.5%, -50%); } }
   @media (min-width: 37.5625em) and (max-width: 56.25em) {
     .item {
