@@ -1,14 +1,15 @@
 .header {
   text-align: center;
   overflow-x: hidden;
-  height: 95vh;
+  height: 65vh;
+  margin-bottom: 5rem;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-dark, 0.8),
       rgba($color-primary-light, 0.8)
     ),
     url(../img/herojob.jpg);
-  background-size: cover;
+  background-size: fit-content;
   background-position: center;
 
   &__text-box {

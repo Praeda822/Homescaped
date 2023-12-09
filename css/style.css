@@ -287,7 +287,11 @@ body {
   /* Starts my animation from beginning */ }
 
 .btn--contact {
-  padding: 10px 20px;
+  padding: 1.5rem 3rem;
+  border: none; }
+
+.btn--nav {
+  padding: 2rem 5rem;
   border: none; }
 
 .btn-text:link, .btn-text:visited {
@@ -328,9 +332,10 @@ body {
 .header {
   text-align: center;
   overflow-x: hidden;
-  height: 95vh;
+  height: 65vh;
+  margin-bottom: 5rem;
   background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.8), rgba(160, 182, 198, 0.8)), url(../img/herojob.jpg);
-  background-size: cover;
+  background-size: fit-content;
   background-position: center; }
   .header__text-box {
     padding: 0 2.5rem;
@@ -921,13 +926,15 @@ body {
       padding: 15rem 0; } }
 
 .section-contact {
-  margin: 15rem 0;
+  margin: 5rem 0;
+  padding: 1.5rem 0.5rem;
   background-image: linear-gradient(to right bottom, rgba(160, 182, 198, 0.8), rgba(55, 76, 92, 0.8)), url(../img/herojob.jpg);
   background-size: cover;
   background-position: center; }
 
 .contact {
-  width: 100%;
+  margin: 0 auto;
+  width: 95%;
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55.5%, transparent 50%), url(../img/sydneyharb-1.jpg);
   background-size: cover;
   border-radius: 3px;
@@ -955,11 +962,10 @@ body {
   overflow-x: hidden; }
 
 .section-about {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
-  background-color: #f7f7f7;
-  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-  padding: 6rem 0.5rem; }
+  background-color: #fefefe;
+  padding: 1.5rem 0.5rem; }
   @media (min-width: 37.5625em) and (max-width: 56.25em) {
     .section-about {
       padding: 15rem 0; } }
