@@ -335,7 +335,7 @@ body {
   height: 65vh;
   margin-bottom: 5rem;
   background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.8), rgba(160, 182, 198, 0.8)), url(../img/herojob.jpg);
-  background-size: fit-content;
+  background-size: cover;
   background-position: center; }
   .header__text-box {
     padding: 0 2.5rem;
