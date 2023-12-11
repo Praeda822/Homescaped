@@ -10,13 +10,18 @@
 
   .grid {
     grid-template-columns: 1fr 1fr;
-    width: 95%;
+    width: 100%;
     gap: 5rem;
     align-items: center;
 
     .grid__item {
       &--2-cols {
         grid-column: span 1;
+
+        @include respond(phone) {
+          grid-column: span 2;
+          margin-left: auto;
+        }
 
         @include respond(tab-port) {
           &:first-child {

@@ -1,21 +1,38 @@
 .header {
   text-align: center;
   overflow-x: hidden;
-  height: 65vh;
   margin-bottom: 5rem;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-dark, 0.8),
-      rgba($color-primary-light, 0.8)
-    ),
-    url(../img/herojob.jpg);
+  height: 50vh;
   background-size: cover;
   background-position: center;
 
+  &--home {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary-light, 0.3)
+      ),
+      url(../img/herojob.jpg);
+  }
+  &--about {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary-light, 0.3)
+      ),
+      url(../img/julzabout1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include respond(phone) {
+      background-position: 0 0;
+      background-size: 100% 100%;
+    }
+  }
+
   &__text-box {
-    padding: 0 2.5rem;
-    text-align: center;
-    margin-top: 10vh;
+    padding: 5rem 2.5rem;
   }
 
   &__btn-box {

@@ -10,7 +10,7 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   /* prevent text flicker on animation */
-  margin-bottom: 3.5rem;
+  margin-top: 0;
 
   &--main {
     display: block;
