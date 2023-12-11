@@ -43,7 +43,7 @@ html {
 body {
   box-sizing: border-box;
   padding: 1.5rem;
-  background-color: #fefefe; }
+  background-color: #fff; }
   @media (max-width: 37.5em) {
     body {
       padding: 0;
@@ -359,21 +359,20 @@ body {
     text-align: center;
     width: 100%; }
   .composition__photo {
-    width: 100%;
+    width: 75%;
     height: auto; }
     @media (max-width: 37.5em) {
       .composition__photo {
-        width: 60%; } }
+        width: 100%; } }
     @media (min-width: 37.5625em) and (max-width: 56.25em) {
       .composition__photo {
         width: 100%; } }
     @media (min-width: 56.3125em) and (max-width: 75em) {
       .composition__photo {
-        max-width: 60%;
-        height: auto; } }
+        max-width: 75%; } }
     @media (min-width: 75.0625em) {
       .composition__photo {
-        max-width: 75%; } }
+        width: 65%; } }
 
 .feature-box {
   height: 95%;
@@ -916,6 +915,24 @@ body {
         box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
         transform: translateY(-0.2rem); }
 
+.section-about {
+  width: 90%;
+  margin: 5.5rem auto;
+  background-color: #fefefe;
+  padding: 1.5rem 0.5rem; }
+  @media (min-width: 37.5625em) and (max-width: 56.25em) {
+    .section-about {
+      padding: 15rem 0; } }
+  .section-about .grid {
+    width: 95%;
+    gap: 5rem;
+    align-items: center; }
+    .section-about .grid .grid__item--2-cols {
+      grid-column: span 1; }
+      @media (min-width: 112.5em) {
+        .section-about .grid .grid__item--2-cols {
+          grid-column: span 2; } }
+
 .section-features {
   padding: 20rem 0;
   background-image: linear-gradient(to right bottom, rgba(160, 182, 198, 0.8), rgba(55, 76, 92, 0.8)), url(../img/sydneyharb-1.jpg);
@@ -960,31 +977,3 @@ body {
 
 .section-gallery {
   overflow-x: hidden; }
-
-.section-about {
-  width: 90%;
-  margin: 0 auto;
-  background-color: #fefefe;
-  padding: 1.5rem 0.5rem; }
-  @media (min-width: 37.5625em) and (max-width: 56.25em) {
-    .section-about {
-      padding: 15rem 0; } }
-  .section-about .grid {
-    width: 95%;
-    gap: 5rem;
-    align-items: center; }
-    @media (min-width: 37.5625em) and (max-width: 56.25em) {
-      .section-about .grid .grid__item--2-cols {
-        grid-column: span 1; } }
-    @media (max-width: 37.5em) {
-      .section-about .grid .grid__item--2-cols {
-        grid-column: span 1; } }
-    @media (min-width: 56.3125em) and (max-width: 75em) {
-      .section-about .grid .grid__item--4-cols {
-        grid-column: span 2; } }
-    @media (min-width: 37.5625em) and (max-width: 56.25em) {
-      .section-about .grid .grid__item--4-cols {
-        grid-column: span 2; } }
-    @media (max-width: 37.5em) {
-      .section-about .grid .grid__item--4-cols {
-        grid-column: span 1; } }
