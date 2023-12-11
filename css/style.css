@@ -357,20 +357,19 @@ body {
   width: 100%; }
   .composition__container {
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid #a0b6c6; }
   .composition__photo {
     width: 75%;
     height: auto; }
     @media (max-width: 37.5em) {
       .composition__photo {
         width: 100%; } }
-    @media (min-width: 37.5625em) and (max-width: 56.25em) {
-      .composition__photo {
-        width: 100%; } }
-    @media (min-width: 56.3125em) and (max-width: 75em) {
-      .composition__photo {
-        max-width: 75%; } }
     @media (min-width: 75.0625em) {
+      .composition__photo {
+        width: 65%; } }
+    @media (min-width: 112.5em) {
       .composition__photo {
         width: 65%; } }
 
@@ -378,8 +377,8 @@ body {
   height: 95%;
   background-color: #fefefe;
   font-size: 1.5rem;
-  font-weight: 300;
-  padding: 2.5rem;
+  font-weight: 400;
+  padding: 1.5rem 3rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -403,7 +402,7 @@ body {
       width: 75%;
       margin: 0 auto; } }
   .feature-box__lbi {
-    font-size: 6rem;
+    font-size: 4.225rem;
     margin-bottom: 0.5rem;
     display: inline-block;
     background: linear-gradient(to right bottom, rgba(55, 76, 92, 0.8), rgba(160, 182, 198, 0.8));
@@ -415,7 +414,6 @@ body {
     flex: 0 0 50%;
     border-top: 1px solid #a0b6c6;
     padding-top: 0.6rem;
-    text-align: start;
     margin-top: auto; }
 
 .form__group:not(:last-child) {
@@ -457,7 +455,7 @@ body {
 .testimonial__box {
   background-color: #fff;
   font-size: 1.5rem;
-  padding: 3rem;
+  padding: 1.5rem 3rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   display: flex;
@@ -479,7 +477,7 @@ body {
 
 .testimonial__quote {
   align-self: flex-start;
-  margin-bottom: 4.5rem; }
+  margin-bottom: 1.5rem; }
 
 .testimonial__content {
   text-align: center; }
@@ -491,14 +489,15 @@ body {
 
 .gallery {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 100%;
   margin: 1.5rem;
   flex-grow: 1;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #a0b6c6; }
   .gallery .container {
     position: relative;
-    width: 90%;
     height: 90vh;
     margin: auto;
     background-color: #fff;
@@ -924,20 +923,21 @@ body {
     .section-about {
       padding: 15rem 0; } }
   .section-about .grid {
+    grid-template-columns: 1fr 1fr;
     width: 95%;
     gap: 5rem;
     align-items: center; }
     .section-about .grid .grid__item--2-cols {
       grid-column: span 1; }
-      @media (min-width: 112.5em) {
-        .section-about .grid .grid__item--2-cols {
-          grid-column: span 2; } }
+      @media (min-width: 37.5625em) and (max-width: 56.25em) {
+        .section-about .grid .grid__item--2-cols:first-child {
+          width: 75%; } }
+
+.section-gallery {
+  overflow-x: hidden; }
 
 .section-features {
-  padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(160, 182, 198, 0.8), rgba(55, 76, 92, 0.8)), url(../img/sydneyharb-1.jpg);
-  background-size: cover;
-  background-position: center; }
+  padding: 20rem 0; }
   @media (min-width: 37.5625em) and (max-width: 56.25em) {
     .section-features {
       padding: 15rem 0; } }
@@ -963,6 +963,12 @@ body {
 
 .section-testimonial {
   padding: 9rem 1.5rem; }
+  .section-testimonial__heading-box {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid #a0b6c6;
+    margin: 3rem auto;
+    width: 75%;
+    padding: 0; }
   .section-testimonial .grid {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
@@ -974,6 +980,3 @@ body {
         .section-testimonial .grid .grid__item--4-cols,
         .section-testimonial .grid .grid__item--2-cols {
           grid-column: span 1; } }
-
-.section-gallery {
-  overflow-x: hidden; }

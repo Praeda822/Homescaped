@@ -9,6 +9,7 @@
   }
 
   .grid {
+    grid-template-columns: 1fr 1fr;
     width: 95%;
     gap: 5rem;
     align-items: center;
@@ -17,25 +18,22 @@
       &--2-cols {
         grid-column: span 1;
 
-        @include respond(big-desktop) {
-          grid-column: span 2;
+        @include respond(tab-port) {
+          &:first-child {
+            width: 75%;
+          }
         }
       }
     }
   }
 }
 
+.section-gallery {
+  overflow-x: hidden;
+}
+
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    ),
-    url(../img/sydneyharb-1.jpg);
-  background-size: cover;
-  background-position: center;
-  // clip-path: polygon(100% 0, 100% 75vh, 0 100%, 0 7vh); going to leave this for now
 
   @include respond(tab-port) {
     padding: 15rem 0;
@@ -79,6 +77,13 @@
 .section-testimonial {
   padding: 9rem 1.5rem;
 
+  &__heading-box {
+    @include borderBtm;
+    margin: 3rem auto;
+    width: 75%;
+    padding: 0;
+  }
+
   .grid {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
@@ -94,8 +99,4 @@
       }
     }
   }
-}
-
-.section-gallery {
-  overflow-x: hidden;
 }

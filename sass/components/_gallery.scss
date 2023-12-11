@@ -1,14 +1,14 @@
 .gallery {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 100%;
   margin: 1.5rem;
   flex-grow: 1;
   margin: 0 auto;
+  @include borderBtm;
 
   .container {
     position: relative;
-    width: 90%;
     height: 90vh;
     margin: auto;
     background-color: $color-white;

@@ -6,6 +6,11 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin borderBtm {
+  padding-bottom: 5rem;
+  border-bottom: 1px solid $color-primary-light;
+}
+
 // MEDIA QUERIES
 /*
 0 - 600px: Phone

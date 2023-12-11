@@ -2,7 +2,7 @@
   &__box {
     background-color: $color-white;
     font-size: 1.5rem;
-    padding: 3rem;
+    padding: 1.5rem 3rem;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     display: flex;
@@ -27,7 +27,7 @@
   }
   &__quote {
     align-self: flex-start;
-    margin-bottom: 4.5rem;
+    margin-bottom: 1.5rem;
   }
 
   &__content {
