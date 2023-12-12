@@ -256,7 +256,6 @@ body {
 
 .btn:hover {
   /* STAY WHERE YOU ARE DAMN YOU */
-  transform: translateY(-0.2rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .btn::after {
@@ -283,7 +282,7 @@ body {
   .btn--white:hover {
     background-color: #000;
     color: #fff;
-    border: 2px solid #fff; }
+    border: 1px solid #fff; }
 
 .btn--gallery {
   padding: 10px 20px;
@@ -293,9 +292,7 @@ body {
 
 .btn--animated {
   animation: moveInBottom 1.65s ease-out 0.75s;
-  /* Animation starts 0.75s after page load to sync with keyframes */
-  animation-fill-mode: backwards;
-  /* Starts my animation from beginning */ }
+  animation-fill-mode: backwards; }
 
 .btn--contact {
   text-transform: capitalize;
