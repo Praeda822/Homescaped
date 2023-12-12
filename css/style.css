@@ -31,12 +31,12 @@ html {
         grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 75.0625em) {
     html {
-      font-size: 75%; }
+      font-size: 70%; }
       html .grid {
         grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 112.5em) {
     html {
-      font-size: 87.5%; }
+      font-size: 77%; }
       html .grid {
         grid-template-columns: repeat(4, 1fr); } }
 
@@ -160,6 +160,11 @@ body {
   font-weight: 700;
   color: #333;
   text-align: center; }
+  .heading-tertiary__nav {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    padding: 0.6rem 0; }
   .heading-tertiary__gallery {
     font-size: 2.75rem;
     font-weight: 700;
@@ -287,6 +292,7 @@ body {
   /* Starts my animation from beginning */ }
 
 .btn--contact {
+  text-transform: capitalize;
   padding: 1.5rem 3rem;
   border: none; }
 
@@ -332,11 +338,11 @@ body {
   text-align: center;
   overflow-x: hidden;
   margin-bottom: 5rem;
-  height: 50vh;
+  height: 45vh;
   background-size: cover;
   background-position: center; }
   .header--home {
-    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/herojob.jpg); }
+    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/headerphoto.jpg); }
   .header--about {
     background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/julzabout1.jpg);
     background-size: cover;
@@ -369,16 +375,17 @@ body {
     border-bottom: 1px solid #a0b6c6; }
   .composition__photo {
     width: auto;
-    height: auto; }
+    height: auto;
+    box-shadow: 0 1.5rem 3rem #000; }
     @media (max-width: 37.5em) {
       .composition__photo {
-        width: 55%; } }
+        width: 75%; } }
     @media (min-width: 37.5625em) and (max-width: 56.25em) {
       .composition__photo {
-        width: 65%; } }
+        width: 75%; } }
     @media (min-width: 56.3125em) and (max-width: 75em) {
       .composition__photo {
-        width: 70%; } }
+        width: 75%; } }
     @media (min-width: 75.0625em) {
       .composition__photo {
         width: 65%; } }
@@ -522,6 +529,7 @@ body {
 .item {
   width: 20rem;
   height: 30rem;
+  border-radius: 1rem;
   background-position: 50% 50%;
   display: inline-block;
   transition: 0.5s;
@@ -732,8 +740,7 @@ body {
     padding-left: 1rem; }
     @media (max-width: 37.5em) {
       .navigation__cta .btn {
-        font-size: 1.4rem;
-        padding: 1.5rem 2rem; } }
+        font-size: 1.4rem; } }
   .navigation__checkbox {
     display: none; }
   .navigation__navbar {
@@ -952,6 +959,9 @@ body {
 
 .section-gallery {
   overflow-x: hidden; }
+  .section-gallery__text-box {
+    margin: 0 auto;
+    width: 65%; }
 
 .section-features {
   padding: 20rem 0; }
@@ -961,19 +971,19 @@ body {
 
 .section-contact {
   margin: 5rem 0;
-  padding: 1.5rem 0.5rem;
-  background-image: linear-gradient(to right bottom, rgba(160, 182, 198, 0.8), rgba(55, 76, 92, 0.8)), url(../img/herojob.jpg);
-  background-size: cover;
-  background-position: center; }
+  padding: 1.5rem 0.5rem; }
 
 .contact {
   margin: 0 auto;
-  width: 95%;
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55.5%, transparent 50%), url(../img/sydneyharb-1.jpg);
+  width: 100%;
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/sydneyharb-1.jpg);
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   height: 100%; }
+  @media (max-width: 37.5em) {
+    .contact {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55%, transparent 50%), url(../img/sydneyharb-1.jpg); } }
   .contact__form {
     width: 50%;
     padding: 4rem; }

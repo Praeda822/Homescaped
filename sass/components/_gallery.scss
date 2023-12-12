@@ -13,6 +13,7 @@
     margin: auto;
     background-color: $color-white;
     box-shadow: 0 1rem 1.5rem $color-black;
+
     &__slide {
       width: max-content;
       margin-top: 5rem;
@@ -23,7 +24,7 @@
 .item {
   width: 20rem;
   height: 30rem;
-
+  border-radius: 1rem;
   @include respond(phone) {
     width: 35%;
     height: 40%;
@@ -75,6 +76,7 @@
     height: 100%;
     box-shadow: none;
 
+    //Darken background for text
     &::before {
       content: "";
       position: absolute;

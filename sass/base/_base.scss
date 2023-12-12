@@ -31,7 +31,7 @@ html {
   }
 
   @include respond(desktop) {
-    font-size: 75%;
+    font-size: 70%;
     .grid {
       grid-template-columns: repeat(
         2,
@@ -41,7 +41,7 @@ html {
   }
 
   @include respond(big-desktop) {
-    font-size: 87.5%;
+    font-size: 77%;
     .grid {
       grid-template-columns: repeat(
         4,

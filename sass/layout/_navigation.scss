@@ -36,10 +36,10 @@
   }
   &__cta {
     padding-left: 1rem;
+
     .btn {
       @include respond(phone) {
         font-size: 1.4rem;
-        padding: 1.5rem 2rem;
       }
     }
   }

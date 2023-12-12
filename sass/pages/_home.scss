@@ -35,6 +35,11 @@
 
 .section-gallery {
   overflow-x: hidden;
+
+  &__text-box {
+    margin: 0 auto;
+    width: 65%;
+  }
 }
 
 .section-features {
@@ -48,26 +53,29 @@
 .section-contact {
   margin: 5rem 0;
   padding: 1.5rem 0.5rem;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    ),
-    url(../img/herojob.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .contact {
   margin: 0 auto;
-  width: 95%;
+  width: 100%;
   background-image: linear-gradient(
       105deg,
       rgba($color-white, 0.9) 0%,
-      rgba($color-white, 0.9) 55.5%,
+      rgba($color-white, 0.9) 50%,
       transparent 50%
     ),
     url(../img/sydneyharb-1.jpg);
+
+  @include respond(phone) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 55%,
+        transparent 50%
+      ),
+      url(../img/sydneyharb-1.jpg);
+  }
+
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
@@ -100,7 +108,7 @@
 
       .grid__item--4-cols,
       .grid__item--2-cols {
-        grid-column: span 1; // Each item spans 2 columns in tablet landscape
+        grid-column: span 1; // Layout adjustment for phones
       }
     }
   }
