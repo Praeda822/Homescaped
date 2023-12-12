@@ -125,3 +125,10 @@ body {
     }
   }
 }
+
+.heading-box {
+  @include borderBtm;
+  margin: 3rem auto;
+  width: 50%;
+  padding: 0;
+}

@@ -208,8 +208,18 @@ body {
       .paragraph__gallery {
         width: 75%; } }
 
+.heading-box {
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #a0b6c6;
+  margin: 3rem auto;
+  width: 50%;
+  padding: 0; }
+
 .u-center-text {
   text-align: center; }
+
+.u-brdr-none {
+  border: none; }
 
 .u-mr-btm-sm {
   margin-bottom: 1.5rem; }
