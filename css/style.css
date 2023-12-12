@@ -17,16 +17,16 @@ html {
   font-size: 62.5%; }
   @media (max-width: 37.5em) {
     html {
-      font-size: 43.75%;
+      font-size: 47.5%;
       grid-template-columns: repeat(1, 1fr); } }
   @media (min-width: 37.5625em) and (max-width: 56.25em) {
     html {
-      font-size: 47.5%; }
+      font-size: 50%; }
       html .grid {
         grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 56.3125em) and (max-width: 75em) {
     html {
-      font-size: 50%; }
+      font-size: 55%; }
       html .grid {
         grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 75.0625em) {
@@ -125,13 +125,13 @@ body {
     display: block;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 2rem;
+    letter-spacing: 1.5rem;
     text-align: center;
     animation: moveInLeft 2.5s ease-out; }
     @media (max-width: 37.5em) {
       .heading-primary--main {
         letter-spacing: 0.5rem;
-        font-size: 5rem; } }
+        font-size: 4rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -141,7 +141,7 @@ body {
     @media (max-width: 37.5em) {
       .heading-primary--sub {
         letter-spacing: 0.5rem;
-        font-size: 3rem; } }
+        font-size: 2rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -189,22 +189,18 @@ body {
     margin-top: 6rem;
     padding: 0.6rem 0;
     border-bottom: 1px solid #a0b6c6;
-    width: 66.6%; }
-    @media (max-width: 37.5em) {
-      .heading-tertiary__footer {
-        text-align: start; } }
-    @media (min-width: 37.5625em) and (max-width: 56.25em) {
-      .heading-tertiary__footer {
-        width: 75%; } }
+    width: 100%; }
 
 .paragraph {
   padding: 0.6rem 0;
-  border-top: 1px solid #a0b6c6; }
+  border-top: 1px solid #a0b6c6;
+  font-size: 1.5rem;
+  font-weight: 500; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
   .paragraph__gallery {
+    font-size: 1.25rem;
     color: #fff;
-    font-weight: 500;
     margin: 2rem 0;
     opacity: 0;
     animation: showcontent 1s ease-in-out 0.3s 1 forwards; }
@@ -297,8 +293,11 @@ body {
   border: none; }
 
 .btn--nav {
-  padding: 2rem 5rem;
+  padding: 3rem 5rem;
   border: none; }
+  @media (max-width: 37.5em) {
+    .btn--nav {
+      padding: 1.5rem 2.5rem; } }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
@@ -353,7 +352,7 @@ body {
         background-position: 0 0;
         background-size: 100% 100%; } }
   .header__text-box {
-    padding: 5rem 2.5rem; }
+    padding: 1.5rem 0.5rem; }
   .header__btn-box {
     margin-top: 47vh; }
     @media (min-width: 56.3125em) and (max-width: 75em) {
@@ -638,8 +637,7 @@ body {
 .footer {
   background-color: #000;
   padding: 10rem 3rem;
-  font-size: 1.4rem;
-  align-items: center; }
+  font-size: 1.4rem; }
   @media (max-width: 37.5em) {
     .footer {
       padding: 0 0.5rem; } }
@@ -649,7 +647,11 @@ body {
   .footer__logo {
     height: 30rem; }
   .footer__navigation {
+    display: flex;
+    justify-content: space-evenly;
     align-items: center; }
+    .footer__navigation::nth-of-type(2) .heading-tertiary__footer {
+      width: 50%; }
   .footer__list {
     padding: 0;
     list-style: none; }
@@ -692,13 +694,11 @@ body {
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 3rem; }
   .grid__item {
     color: #333;
     padding: 1rem;
-    border-radius: 0.4rem;
-    min-height: 10rem; }
+    border-radius: 0.4rem; }
     .grid__item--1-col {
       grid-column: span 1; }
     .grid__item--2-cols {
@@ -970,23 +970,31 @@ body {
       padding: 15rem 0; } }
 
 .section-contact {
-  margin: 5rem 0;
-  padding: 1.5rem 0.5rem; }
+  margin: 5rem auto;
+  padding: 1.5rem 0.5rem;
+  width: 85%; }
+  @media (max-width: 37.5em) {
+    .section-contact {
+      width: 100%; } }
 
 .contact {
   margin: 0 auto;
   width: 100%;
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/sydneyharb-1.jpg);
   background-size: cover;
+  background-position: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   height: 100%; }
   @media (max-width: 37.5em) {
     .contact {
-      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55%, transparent 50%), url(../img/sydneyharb-1.jpg); } }
+      background-image: linear-gradient(100deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55%, transparent 50%), url(../img/sydneyharb-1.jpg); } }
   .contact__form {
     width: 50%;
     padding: 4rem; }
+    @media (max-width: 37.5em) {
+      .contact__form {
+        padding: 2rem; } }
 
 .section-testimonial {
   padding: 9rem 1.5rem; }

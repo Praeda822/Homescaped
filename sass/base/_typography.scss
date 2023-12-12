@@ -16,13 +16,13 @@ body {
     display: block;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 2rem;
+    letter-spacing: 1.5rem;
     text-align: center;
     animation: moveInLeft 2.5s ease-out;
 
     @include respond(phone) {
       letter-spacing: 0.5rem;
-      font-size: 5rem;
+      font-size: 4rem;
     }
   }
 
@@ -36,7 +36,7 @@ body {
 
     @include respond(phone) {
       letter-spacing: 0.5rem;
-      font-size: 3rem;
+      font-size: 2rem;
     }
   }
 }
@@ -99,27 +99,23 @@ body {
     margin-top: 6rem;
     padding: 0.6rem 0;
     border-bottom: 1px solid $color-primary-light;
-    width: 66.6%;
-
-    @include respond(phone) {
-      text-align: start;
-    }
-    @include respond(tab-port) {
-      width: 75%;
-    }
+    width: 100%;
   }
 }
 
 .paragraph {
+  padding: 0.6rem 0;
+  border-top: 1px solid $color-primary-light;
+  font-size: 1.5rem;
+  font-weight: 500;
+
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
-  padding: 0.6rem 0;
-  border-top: 1px solid $color-primary-light;
 
   &__gallery {
+    font-size: 1.25rem;
     color: $color-white;
-    font-weight: 500;
     margin: 2rem 0;
     opacity: 0;
     animation: showcontent 1s ease-in-out 0.3s 1 forwards;

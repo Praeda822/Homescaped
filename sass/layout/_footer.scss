@@ -2,7 +2,6 @@
   background-color: $color-black;
   padding: 10rem 3rem;
   font-size: 1.4rem;
-  align-items: center;
 
   @include respond(phone) {
     padding: 0 0.5rem;
@@ -18,7 +17,14 @@
   }
 
   &__navigation {
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
+    &::nth-of-type(2) {
+      .heading-tertiary__footer {
+        width: 50%;
+      }
+    }
   }
 
   &__list {

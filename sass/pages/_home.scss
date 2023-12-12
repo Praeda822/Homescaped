@@ -51,13 +51,19 @@
 }
 
 .section-contact {
-  margin: 5rem 0;
+  margin: 5rem auto;
   padding: 1.5rem 0.5rem;
+  width: 85%;
+
+  @include respond(phone) {
+    width: 100%;
+  }
 }
 
 .contact {
   margin: 0 auto;
   width: 100%;
+
   background-image: linear-gradient(
       105deg,
       rgba($color-white, 0.9) 0%,
@@ -68,7 +74,7 @@
 
   @include respond(phone) {
     background-image: linear-gradient(
-        105deg,
+        100deg,
         rgba($color-white, 0.9) 0%,
         rgba($color-white, 0.9) 55%,
         transparent 50%
@@ -77,6 +83,7 @@
   }
 
   background-size: cover;
+  background-position: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
   height: 100%;
@@ -84,6 +91,10 @@
   &__form {
     width: 50%;
     padding: 4rem;
+
+    @include respond(phone) {
+      padding: 2rem;
+    }
   }
 }
 

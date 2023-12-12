@@ -72,8 +72,12 @@
   }
 
   &--nav {
-    padding: 2rem 5rem;
+    padding: 3rem 5rem;
     border: none;
+
+    @include respond(phone) {
+      padding: 1.5rem 2.5rem;
+    }
   }
 }
 
