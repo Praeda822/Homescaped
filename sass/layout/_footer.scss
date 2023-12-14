@@ -3,6 +3,10 @@
   padding: 10rem 3rem;
   font-size: 1.4rem;
 
+  &.grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   @include respond(phone) {
     padding: 0 0.5rem;
   }
@@ -87,7 +91,7 @@
 
     & .paragraph {
       margin: 0 auto;
-      width: 75%;
+      width: 55%;
     }
   }
 }

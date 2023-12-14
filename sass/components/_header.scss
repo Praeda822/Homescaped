@@ -31,6 +31,66 @@
     }
   }
 
+  &--landscaping {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary-light, 0.3)
+      ),
+      url(../img/landscaping2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--carpentry {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary-light, 0.3)
+      ),
+      url(../img/carpentry2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--hedging {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary-light, 0.3)
+      ),
+      url(../img/hedging5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--property {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary-light, 0.3)
+      ),
+      url(../img/property2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--emergency {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary-light, 0.3)
+      ),
+      url(../img/emergency3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   &__text-box {
     padding: 1.5rem 0.5rem;
   }

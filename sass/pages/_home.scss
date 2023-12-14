@@ -42,6 +42,13 @@
   }
 }
 
+.section-services {
+  margin: 0 auto;
+  width: 90%;
+  padding: 6rem 3rem;
+  @include mobileAlign;
+}
+
 .section-features {
   padding: 20rem 0;
 
@@ -100,13 +107,6 @@
 
 .section-testimonial {
   padding: 9rem 1.5rem;
-
-  &__heading-box {
-    @include borderBtm;
-    margin: 3rem auto;
-    width: 75%;
-    padding: 0;
-  }
 
   .grid {
     grid-template-columns: repeat(4, 1fr);

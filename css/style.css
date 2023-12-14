@@ -211,9 +211,10 @@ body {
 .heading-box {
   padding-bottom: 5rem;
   border-bottom: 1px solid #a0b6c6;
-  margin: 3rem auto;
+  background-color: #fff;
+  margin: 9rem auto 2rem;
   width: 50%;
-  padding: 0; }
+  padding: 6rem 2rem; }
 
 .u-center-text {
   text-align: center; }
@@ -255,7 +256,6 @@ body {
   cursor: pointer; }
 
 .btn:hover {
-  /* STAY WHERE YOU ARE DAMN YOU */
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .btn::after {
@@ -283,6 +283,14 @@ body {
     background-color: #000;
     color: #fff;
     border: 1px solid #fff; }
+
+.btn--black {
+  background-color: #000;
+  color: #fff; }
+  .btn--black:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000; }
 
 .btn--gallery {
   padding: 10px 20px;
@@ -358,6 +366,31 @@ body {
       .header--about {
         background-position: 0 0;
         background-size: 100% 100%; } }
+  .header--landscaping {
+    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/landscaping2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .header--carpentry {
+    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/carpentry2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .header--hedging {
+    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/hedging5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .header--property {
+    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/property2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .header--emergency {
+    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/emergency3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
   .header__text-box {
     padding: 1.5rem 0.5rem; }
   .header__btn-box {
@@ -645,6 +678,8 @@ body {
   background-color: #000;
   padding: 10rem 3rem;
   font-size: 1.4rem; }
+  .footer.grid {
+    grid-template-columns: repeat(4, 1fr); }
   @media (max-width: 37.5em) {
     .footer {
       padding: 0 0.5rem; } }
@@ -694,7 +729,7 @@ body {
     color: #fefefe; }
     .footer__copyright .paragraph {
       margin: 0 auto;
-      width: 75%; }
+      width: 55%; }
 
 .grid {
   max-width: 120rem;
@@ -970,6 +1005,22 @@ body {
     margin: 0 auto;
     width: 65%; }
 
+.section-services {
+  margin: 0 auto;
+  width: 90%;
+  padding: 6rem 3rem; }
+  .section-services .grid {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 5rem;
+    align-items: center; }
+    .section-services .grid .grid__item--2-cols {
+      grid-column: span 1; }
+      @media (max-width: 37.5em) {
+        .section-services .grid .grid__item--2-cols {
+          grid-column: span 2;
+          margin-left: auto; } }
+
 .section-features {
   padding: 20rem 0; }
   @media (min-width: 37.5625em) and (max-width: 56.25em) {
@@ -1005,12 +1056,6 @@ body {
 
 .section-testimonial {
   padding: 9rem 1.5rem; }
-  .section-testimonial__heading-box {
-    padding-bottom: 5rem;
-    border-bottom: 1px solid #a0b6c6;
-    margin: 3rem auto;
-    width: 75%;
-    padding: 0; }
   .section-testimonial .grid {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
@@ -1022,3 +1067,13 @@ body {
         .section-testimonial .grid .grid__item--4-cols,
         .section-testimonial .grid .grid__item--2-cols {
           grid-column: span 1; } }
+
+.services {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  margin: 1.5rem;
+  margin: 0 auto; }
+  .services__text-box {
+    margin: 0 auto;
+    width: 65%; }

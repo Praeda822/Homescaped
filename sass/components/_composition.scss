@@ -30,5 +30,8 @@
     @include respond(big-desktop) {
       width: 65%;
     }
+
+    &--services {
+    }
   }
 }
