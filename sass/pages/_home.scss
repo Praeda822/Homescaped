@@ -69,13 +69,6 @@
 
   background: $color-grey-light-1;
   overflow: hidden;
-
-  &__locations {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 .section-features {

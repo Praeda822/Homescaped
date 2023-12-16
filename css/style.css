@@ -212,9 +212,15 @@ body {
     @media (min-width: 37.5625em) and (max-width: 56.25em) {
       .paragraph__gallery {
         width: 75%; } }
+  .paragraph__locations {
+    font-size: 2rem;
+    color: #333;
+    margin: 2rem 0;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid #a0b6c6; }
 
 .heading-box {
-  padding-bottom: 5rem;
+  padding-bottom: 3.5rem;
   border-bottom: 1px solid #a0b6c6;
   background-color: #fff;
   margin: 9rem auto 2rem;
@@ -372,17 +378,17 @@ body {
         background-position: 0 0;
         background-size: 100% 100%; } }
   .header--landscaping {
-    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/landscaping2.jpg);
+    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/landscaping1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
   .header--carpentry {
-    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/carpentry2.jpg);
+    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/carpentryheader.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
   .header--hedging {
-    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/hedging5.jpg);
+    background-image: linear-gradient(to right bottom, rgba(55, 76, 92, 0.3), rgba(160, 182, 198, 0.3)), url(../img/hedgingheader.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
@@ -417,14 +423,28 @@ body {
 
 .composition {
   width: 100%; }
-  .composition__wrapper {
-    flex-wrap: wrap;
-    gap: 1rem; }
   .composition__container {
     text-align: center;
     width: 100%;
-    padding-bottom: 5rem;
+    padding-bottom: 3.5rem;
     border-bottom: 1px solid #a0b6c6; }
+    .composition__container--locations {
+      position: relative;
+      overflow: hidden; }
+      .composition__container--locations:hover .composition__overlay {
+        opacity: 0.8; }
+  .composition__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.9s ease; }
   .composition__photo {
     width: auto;
     height: auto;
@@ -566,7 +586,7 @@ body {
   margin: 1.5rem;
   flex-grow: 1;
   margin: 0 auto;
-  padding-bottom: 5rem;
+  padding-bottom: 3.5rem;
   border-bottom: 1px solid #a0b6c6; }
   .gallery .container {
     position: relative;
@@ -1049,11 +1069,6 @@ body {
   width: 90%;
   background: #fefefe;
   overflow: hidden; }
-  .section-locations__locations {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
 
 .section-features {
   padding: 20rem 0; }
@@ -1112,6 +1127,9 @@ body {
     margin: 0 auto;
     width: 65%; }
 
-.locations__text-box {
-  margin: 0 auto;
-  width: 65%; }
+.locations {
+  flex-wrap: wrap;
+  flex-direction: column; }
+  .locations__text-box {
+    margin: 0 auto;
+    width: 65%; }
