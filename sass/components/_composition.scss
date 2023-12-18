@@ -11,14 +11,28 @@
       position: relative;
       overflow: hidden;
       padding: 1.5rem;
+      flex-direction: column;
 
       &:hover .composition__overlay {
         opacity: 0.8;
+      }
+
+      @include respond(desktop) {
+        .heading-tertiary__locations {
+          display: none;
+        }
+      }
+
+      @include respond(big-desktop) {
+        .heading-tertiary__locations {
+          display: none;
+        }
       }
     }
   }
   &__overlay {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -29,6 +43,7 @@
     background: rgba(255, 255, 255, 0.8);
     opacity: 0;
     transition: opacity 0.9s ease;
+    text-align: center;
   }
 
   &__photo {

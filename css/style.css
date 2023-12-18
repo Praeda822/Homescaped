@@ -203,6 +203,12 @@ body {
   font-weight: 500; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
+  .paragraph__breaker {
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid #a0b6c6;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto; }
   .paragraph__gallery {
     font-size: 1.25rem;
     color: #fff;
@@ -213,11 +219,21 @@ body {
       .paragraph__gallery {
         width: 75%; } }
   .paragraph__locations {
-    font-size: 2rem;
-    color: #333;
     padding-bottom: 3.5rem;
     border-bottom: 1px solid #a0b6c6;
-    padding: 0; }
+    font-size: 2rem;
+    color: #333;
+    padding: 0;
+    margin: 0 auto; }
+    @media (max-width: 37.5em) {
+      .paragraph__locations {
+        display: none; } }
+    @media (min-width: 37.5625em) and (max-width: 56.25em) {
+      .paragraph__locations {
+        display: none; } }
+    @media (min-width: 56.3125em) and (max-width: 75em) {
+      .paragraph__locations {
+        display: none; } }
 
 .heading-box {
   padding-bottom: 3.5rem;
@@ -432,11 +448,19 @@ body {
     .composition__container--locations {
       position: relative;
       overflow: hidden;
-      padding: 1.5rem; }
+      padding: 1.5rem;
+      flex-direction: column; }
       .composition__container--locations:hover .composition__overlay {
         opacity: 0.8; }
+      @media (min-width: 75.0625em) {
+        .composition__container--locations .heading-tertiary__locations {
+          display: none; } }
+      @media (min-width: 112.5em) {
+        .composition__container--locations .heading-tertiary__locations {
+          display: none; } }
   .composition__overlay {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -446,7 +470,8 @@ body {
     height: 100%;
     background: rgba(255, 255, 255, 0.8);
     opacity: 0;
-    transition: opacity 0.9s ease; }
+    transition: opacity 0.9s ease;
+    text-align: center; }
   .composition__photo {
     width: auto;
     height: auto;
@@ -1076,7 +1101,6 @@ body {
   background: #fefefe;
   overflow: hidden; }
   .section-locations .locations {
-    flex-wrap: wrap;
     flex-direction: column; }
     .section-locations .locations__text-box {
       margin: 0 auto;
@@ -1128,13 +1152,3 @@ body {
         .section-testimonial .grid .grid__item--4-cols,
         .section-testimonial .grid .grid__item--2-cols {
           grid-column: span 1; } }
-
-.services {
-  width: 100%;
-  position: relative;
-  height: 100%;
-  margin: 1.5rem;
-  margin: 0 auto; }
-  .services__text-box {
-    margin: 0 auto;
-    width: 65%; }

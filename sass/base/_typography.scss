@@ -120,6 +120,13 @@ body {
     margin-bottom: 3rem;
   }
 
+  &__breaker {
+    @include borderBtm;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &__gallery {
     font-size: 1.25rem;
     color: $color-white;
@@ -133,10 +140,23 @@ body {
   }
 
   &__locations {
+    @include borderBtm;
     font-size: 2rem;
     color: $color-grey-dark;
-    @include borderBtm;
     padding: 0;
+    margin: 0 auto;
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 }
 
