@@ -135,15 +135,15 @@ body {
   &__locations {
     font-size: 2rem;
     color: $color-grey-dark;
-    margin: 2rem 0;
     @include borderBtm;
+    padding: 0;
   }
 }
 
 .heading-box {
   @include borderBtm;
   background-color: $color-white;
-  margin: 9rem auto 2rem;
+  margin: 6rem auto 2rem;
   width: 50%;
-  padding: 6rem 2rem;
+  padding: 3rem 1.5rem;
 }

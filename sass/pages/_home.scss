@@ -69,6 +69,15 @@
 
   background: $color-grey-light-1;
   overflow: hidden;
+
+  .locations {
+    flex-wrap: wrap;
+    flex-direction: column;
+    &__text-box {
+      margin: 0 auto;
+      width: 55%;
+    }
+  }
 }
 
 .section-features {
