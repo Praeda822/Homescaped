@@ -65,6 +65,7 @@ body {
   text-align: center;
 
   &__nav {
+    text-decoration: none;
     margin: 0;
     color: $color-white;
     text-align: center;
@@ -93,7 +94,6 @@ body {
 
   &__locations {
     font-size: 2.5rem;
-    font-weight: 500;
     color: $color-grey-dark;
     text-align: center;
   }
@@ -118,13 +118,6 @@ body {
 
   &:not(:last-child) {
     margin-bottom: 3rem;
-  }
-
-  &__breaker {
-    @include borderBtm;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   &__gallery {

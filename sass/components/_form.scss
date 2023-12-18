@@ -3,7 +3,8 @@
     margin-bottom: 1rem;
   }
 
-  &__input {
+  &__input,
+  select.form__input {
     font-size: 1.5rem;
     font-family: inherit;
     color: inherit;
@@ -18,15 +19,28 @@
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
-      border-bottom: 3px solid $color-primary-light;
+      border-bottom: 3px solid $color-secondary-valid;
     }
 
     &:focus:invalid {
-      border-bottom: 3px solid $color-secondary-dark;
+      border-bottom: 3px solid $color-secondary-invalid;
     }
 
-    &::-webkit-input-placeholder {
+    &::-webkit-input-placeholder,
+    &::-webkit-select-placeholder {
       color: $color-grey-dark-1;
+    }
+
+    &:not(:placeholder-shown) {
+      color: inherit;
+    }
+
+    option {
+      color: inherit;
+    }
+
+    option[disabled] {
+      color: $color-primary;
     }
   }
 
@@ -36,12 +50,5 @@
     margin-left: 2rem;
     margin-top: 0.7rem;
     display: block;
-    transition: all 0.3s;
-  }
-
-  &__input:placeholder-shown + &__label {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-4rem);
   }
 }
