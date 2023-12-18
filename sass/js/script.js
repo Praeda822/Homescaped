@@ -1,25 +1,15 @@
-// Smooth scroll for anchor links
-const allLinks = document.querySelectorAll(".container a:link");
+// Smooth scroll for anchor links within the page
+const internalLinks = document.querySelectorAll(
+  ".container a[href^='#']:not([href='#'])"
+);
 
-allLinks.forEach((link) => {
+// Smooth scroll to other sections
+internalLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
     const href = link.getAttribute("href");
-    console.log(href);
-
-    // Scroll back to top of page
-    if (href === "#") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-
-    // Smooth scroll to other sections
-    if (href !== "#" && href.startsWith("#")) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
-    }
+    const sectionEl = document.querySelector(href);
+    sectionEl.scrollIntoView({ behavior: "smooth" });
   });
 });
 

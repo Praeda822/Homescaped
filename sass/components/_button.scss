@@ -7,8 +7,6 @@
     font-weight: 600;
     display: inline-block;
     position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-
     border: none;
     cursor: pointer;
   }
@@ -16,101 +14,59 @@
   &:hover {
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
   }
+}
 
-  &::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 2px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: none;
-  }
+&--white {
+  background-color: $color-white;
+  color: $color-grey-dark;
 
-  &:focus {
-    outline: none;
-    &::after {
-      background-color: $color-white;
-      animation: popout 0.75s forwards;
-    }
-  }
-
-  &--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-
-    &:hover {
-      background-color: $color-black;
-      color: $color-white;
-      border: 1px solid $color-white;
-    }
-  }
-
-  &--black {
-    margin-top: 3rem;
+  &:hover {
     background-color: $color-black;
     color: $color-white;
-
-    &:hover {
-      background-color: $color-white;
-      color: $color-black;
-      border: 1px solid $color-black;
-    }
-  }
-
-  &--gallery {
-    padding: 10px 20px;
-    border: none;
-    opacity: 0;
-    animation: showcontent 1s ease-in-out 0.6s 1 forwards;
-  }
-
-  // Animation starts 0.75s after page load to sync with keyframes
-  &--animated {
-    animation: moveInBottom 1.65s ease-out 0.75s;
-
-    animation-fill-mode: backwards;
-  }
-
-  &--contact {
-    margin-top: 2rem;
-    text-transform: capitalize;
-    padding: 1.5rem 3rem;
-    border: none;
-  }
-
-  &--nav {
-    padding: 3rem 5rem;
-    border: none;
-
-    @include respond(phone) {
-      padding: 1.5rem 2.5rem;
-    }
+    border: 1px solid $color-white;
   }
 }
 
-.btn-text {
-  &:link,
-  &:visited {
-    font-size: $default-font-size;
-    color: $color-primary;
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: 1px solid $color-primary-light;
-    padding: 3px;
-    transition: all 0.2s;
-  }
+&--black {
+  margin-top: 3rem;
+  background-color: $color-black;
+  color: $color-white;
 
   &:hover {
-    transform: translateY(-0.3rem);
+    background-color: $color-white;
+    color: $color-black;
+    border: 1px solid $color-black;
   }
+}
 
-  &:active {
-    transform: translateY(0.1rem);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+&--gallery {
+  z-index: 2000;
+  padding: 1rem 2rem;
+  border: none;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+}
+
+// Animation starts 0.75s after page load to sync with keyframes
+&--animated {
+  animation: moveInBottom 1.65s ease-out 0.75s;
+
+  animation-fill-mode: backwards;
+}
+
+&--contact {
+  margin-top: 2rem;
+  text-transform: capitalize;
+  padding: 1.5rem 3rem;
+  border: none;
+}
+
+&--nav {
+  padding: 3rem 5rem;
+  border: none;
+
+  @include respond(phone) {
+    padding: 1.5rem 2.5rem;
   }
 }
 
@@ -119,7 +75,7 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 222222;
+  z-index: 2000;
   text-align: center;
   width: 100%;
 

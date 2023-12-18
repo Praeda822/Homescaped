@@ -14,7 +14,8 @@ ORDER: base -> typography -> utilities -> components -> layout -> pages
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
   @media (max-width: 37.5em) {
     html {
       font-size: 47.5%;
@@ -161,11 +162,13 @@ body {
   color: #333;
   text-align: center; }
   .heading-tertiary__nav {
-    text-decoration: none;
-    margin: 0;
     color: #fff;
+    margin: 0;
     text-align: center;
     padding: 0.6rem 0; }
+    .heading-tertiary__nav a[href^="tel"] {
+      color: #fff;
+      text-decoration: none; }
   .heading-tertiary__gallery {
     font-size: 2.75rem;
     font-weight: 700;
@@ -301,7 +304,6 @@ body {
   font-weight: 600;
   display: inline-block;
   position: relative;
-  transition: transform 0.3s, box-shadow 0.3s;
   border: none;
   cursor: pointer; }
 
@@ -387,7 +389,7 @@ body {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 222222;
+  z-index: 2000;
   text-align: center;
   width: 100%; }
   .buttons button {
@@ -857,6 +859,9 @@ body {
       grid-column: span 4; }
 
 .navigation {
+  position: sticky;
+  top: 0;
+  z-index: 2500;
   margin-left: auto;
   width: 100%;
   display: flex;
@@ -864,7 +869,13 @@ body {
   align-items: center;
   background-color: #000;
   font-family: inherit;
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1); }
+  @media (min-width: 75.0625em) {
+    .navigation {
+      position: static; } }
+  @media (min-width: 112.5em) {
+    .navigation {
+      position: static; } }
   .navigation__logo {
     overflow-x: hidden;
     height: auto;
