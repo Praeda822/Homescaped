@@ -13,7 +13,7 @@ html {
   // 1rem = 10px - 10px/16px = 62.5%*
 
   @include respond(phone) {
-    font-size: 47.5%;
+    font-size: 50%;
     //1rem = 6px
     grid-template-columns: repeat(1, 1fr); // 1 columns for smol screens
   }
