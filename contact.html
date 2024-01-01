@@ -250,8 +250,10 @@
 
         <div class="contact" id="contactus">
           <div class="contact__form">
-            <form action="#" class="form">
-              <h2 class="heading-secondary">Discover Your Dream Home</h2>
+            <form name="contact" method="POST" class="form" netlify>
+              <h2 class="heading-secondary">Call us today for a free quote!</h2>
+
+              <input type="hidden" name="form-name" value="contact" />
 
               <label for="name" class="form__label"
                 >Your Full Name<span style="color: #ff0000">*</span></label
@@ -262,6 +264,7 @@
                   class="form__input"
                   placeholder="John Citizen"
                   id="name"
+                  name="name"
                   required
                 />
               </div>
@@ -275,6 +278,7 @@
                   class="form__input"
                   placeholder="0412&nbsp;345&nbsp;678"
                   id="phone"
+                  name="phone"
                   required
                 />
               </div>
@@ -288,6 +292,7 @@
                   class="form__input"
                   placeholder="property@homescaped.com"
                   id="email"
+                  name="email"
                   required
                 />
               </div>
@@ -295,9 +300,9 @@
                 >Your Suburb<span style="color: #ff0000">*</span></label
               >
               <div class="form__group">
-                <select class="form__input" id="suburb" required>
+                <select class="form__input" id="suburb" name="suburb" required>
                   <option value="" disabled selected>
-                    Please Select a Suburb
+                    Please Select Your Location
                   </option>
                   <option value="sydney">Sydney</option>
                   <option value="nshore">North Shore</option>
@@ -309,7 +314,12 @@
                 >Services Required<span style="color: #ff0000">*</span></label
               >
               <div class="form__group">
-                <select class="form__input" id="services" required>
+                <select
+                  class="form__input"
+                  id="services"
+                  name="services"
+                  required
+                >
                   <option value="" disabled selected>
                     Please Select a Service
                   </option>
